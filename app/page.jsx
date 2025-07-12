@@ -1,11 +1,11 @@
-import LandingPage from "@/components/landing-page"
+import { HeroSection } from "@/components/ui/hero-section";
+import { FeaturesSection } from "@/components/ui/features-section";
 
-export const metadata = {
-  title: "Your Company - Landing Page",
-  description:
-    "Unlock your potential with our platform. Experience seamless deployment, powerful features, and flexible pricing.",
-}
-
-export default function Page() {
-  return <LandingPage />
+export default function Home() {
+  return (
+    <main>
+      <HeroSection />
+      <FeaturesSection />
+    </main>
+  );
 }
