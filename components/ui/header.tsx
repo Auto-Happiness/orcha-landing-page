@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const menuItems = [
   { name: "Features", href: "#features" },
   { name: "Deployment", href: "/deployment" },
-  { name: "Pricing", href: "/pricing" },
+  { name: "Pricing", href: "#pricing" },
   { name: "Company", href: "/company" },
 ];
 
