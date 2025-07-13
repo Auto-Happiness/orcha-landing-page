@@ -2,37 +2,37 @@
 
 import { Button } from "./button";
 import { Check } from "lucide-react";
+import { BackgroundGradient } from "./background-gradient";
 
 const tiers = [
   {
     name: "Basic",
     id: "tier-basic",
-    price: "₱1,500",
-    description: "Ideal for small businesses focused on enhancing customer satisfaction, and explore how AI can help with everyday tasks.",
+    price: "$27",
+    description: "Perfect for trying out our platform.",
     features: [
-      "3k messages",
-      "2 live chatbot agents",
-      "2 custom tools",
-      "Real-time data from the web with search",
-      "Support over live chat"
+      "1k messages",
+      "1 live chatbot agent",
+      "Basic features",
+      "Community support"
     ],
   },
   {
     name: "Pro",
     id: "tier-pro",
-    price: "₱5,000",
+    price: "$89",
     description: "For businesses requiring better limits, additional integration, features, and premium support.",
     features: [
       "10k messages",
       "5 live chatbot agents",
-      "Real-time data from the web with searfch",
+      "Real-time data from the web with search",
       "Support over live chat"
     ],
   },
   {
     name: "Premium",
     id: "tier-premium",
-    price: "₱25,000",
+    price: "$450",
     description: "For more complex businesses",
     features: [
       "100k messages",
@@ -44,7 +44,7 @@ const tiers = [
   {
     name: "Pay-as-You-Go(PAYG)",
     id: "tier-payg",
-    price: "Custom",
+    price: "",
     description: "Flexible, consumption-based pricing where you only pay for what you use—no upfront costs, no contracts.",
     features: [
       "Unlimited messages",
@@ -55,7 +55,7 @@ const tiers = [
   {
     name: "Self Managed",
     id: "tier-selfmanaged",
-    price: "Custom",
+    price: "",
     description: "Self-hosted solution with full control over configuration, infrastructure, and security—designed for teams that need complete autonomy.",
     features: [
       "Unlimited messages",
@@ -79,35 +79,35 @@ export const PricingSection = () => {
             All plans include a 14-day free trial.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5 lg:gap-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
           {tiers.map((tier) => (
-            <div
-              key={tier.id}
-              className="flex flex-col p-6 bg-zinc-900 rounded-lg border border-zinc-800 shadow-lg hover:border-zinc-700 transition-colors"
-            >
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-white">{tier.name}</h3>
-                <div className="flex items-baseline">
-                  <span className="text-4xl font-bold text-white">{tier.price}</span>
-                  {tier.price !== "Custom" && <span className="text-zinc-400 ml-1">/month</span>}
+            <BackgroundGradient key={tier.id} className="h-full rounded-3xl overflow-hidden">
+  <div className="relative h-full flex flex-col p-6 bg-zinc-900 border border-white/10">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-white">{tier.name}</h3>
+                  <div className="flex items-baseline">
+                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    {tier.price !== "" && <span className="text-zinc-400 ml-1">/month</span>}
+                  </div>
+                  <p className="text-zinc-400 text-sm">{tier.description}</p>
                 </div>
-                <p className="text-zinc-400 text-sm">{tier.description}</p>
+                <ul className="mt-6 space-y-3 flex-1 text-sm">
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="flex items-center text-zinc-300">
+                      <Check className="h-4 w-4 text-emerald-500 mr-3 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button 
+                  className="mt-8 w-full bg-black/25 text-white border-white/20 hover:bg-black/50 hover:border-white/40 transition-colors"
+                  variant="outline"
+                >
+                  {/* {tier.name === "Basic" ? "Get Started" : tier.price === "Custom" ? "Contact Sales" : "Start Trial"} */}
+                  {tier.price === "" ? "Contact Sales" : "Start Started"}
+                </Button>
               </div>
-              <ul className="mt-6 space-y-3 flex-1 text-sm">
-                {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-center text-zinc-300">
-                    <Check className="h-4 w-4 text-emerald-500 mr-3 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button 
-                className="mt-8 w-full bg-white text-black hover:bg-zinc-200"
-                variant="outline"
-              >
-                {tier.name === "Enterprise" ? "Contact Sales" : "Start Trial"}
-              </Button>
-            </div>
+            </BackgroundGradient>
           ))}
         </div>
       </div>
