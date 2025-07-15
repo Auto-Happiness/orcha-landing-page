@@ -4,11 +4,11 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { PricingDrawer } from "./pricing-drawer";
 
 const menuItems = [
   { name: "Features", href: "#features" },
   { name: "Deployment", href: "/deployment" },
-  { name: "Pricing", href: "#pricing" },
   { name: "Company", href: "/company" },
 ];
 
@@ -52,9 +52,10 @@ export function Header() {
               {item.name}
             </Link>
           ))}
+          <PricingDrawer />
         </div>
 
-        <div className="flex md:hidden">
+        <div className="md:hidden">
           <button
             className="text-white hover:text-white/70 transition-colors"
             aria-label="Toggle Menu"
