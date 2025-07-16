@@ -53,16 +53,39 @@ const channels = [
   }
 ];
 
-const menuItems = [
-  { name: "Features", href: "#features" },
-  { name: "Company", href: "/company" },
+const companyItems = [
+  {
+    title: "About",
+    href: "/company/about",
+    description: "Learn more about our mission, values, and team.",
+  },
+  {
+    title: "Events",
+    href: "/company/events",
+    description: "Stay updated with our latest events and announcements.",
+  },
+  {
+    title: "Careers",
+    href: "/company/careers",
+    description: "Join our team and help shape the future of AI.",
+  },
 ];
 
-function ListItem({ className, title, children, ...props }: React.ComponentPropsWithoutRef<"a"> & { title: string }) {
+const menuItems = [
+  { name: "Features", href: "#features" },
+];
+
+interface ListItemProps extends Omit<React.ComponentPropsWithoutRef<typeof Link>, 'href'> {
+  title: string;
+  href: string;
+}
+
+function ListItem({ className, title, children, href, ...props }: ListItemProps) {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <Link
+          href={href}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-zinc-800 focus:bg-zinc-800",
             className
@@ -73,7 +96,7 @@ function ListItem({ className, title, children, ...props }: React.ComponentProps
           <p className="line-clamp-2 text-sm leading-snug text-zinc-400">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   );
@@ -143,7 +166,7 @@ export function Header() {
           stiffness: 200,
           damping: 50,
         }}
-        className="w-full bg-black/50 backdrop-blur-lg border-b border-white/10"> {/* NOTE: removed rounded-full */}
+        className="w-full bg-black/50 backdrop-blur-lg border-b border-white/10">
 
         <nav className="container mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center">
@@ -175,6 +198,24 @@ export function Header() {
                     </Link>
                   </NavigationMenuItem>
                 ))}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">Company</NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-zinc-900 border border-white/10">
+                    <div className="p-4">
+                      <ul className="grid w-[400px] gap-3">
+                        {companyItems.map((item) => (
+                          <ListItem
+                            key={item.title}
+                            title={item.title}
+                            href={item.href}
+                          >
+                            {item.description}
+                          </ListItem>
+                        ))}
+                      </ul>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">Products</NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-zinc-900 border border-white/10">
