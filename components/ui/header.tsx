@@ -59,7 +59,22 @@ const features = [
     href: "/features/analytics",
     description: "Check your daily metrics and performance.",
     icon: Activity
+  }
+];
+
+const channels = [
+  {
+    title: "Discord",
+    href: "/features/channels/discord",
+    description: "Connect and manage your AI agents through Discord.",
+    image: "/platforms/discord-logo.svg"
   },
+  {
+    title: "Slack",
+    href: "/features/channels/slack",
+    description: "Integrate AI agents directly into your Slack workspace.",
+    image: "/platforms/slack-logo.svg"
+  }
 ];
 
 const resources = [
@@ -243,21 +258,44 @@ export function Header() {
                     <LayoutGrid className="h-4 w-4 mr-2" />
                     Features
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-zinc-900 border border-white/10">
-                    <div className="p-4 w-[400px]">
-                      <ul className="grid gap-3">
+                  <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
+                    <div className="p-4 w-[600px]">
+                      <div className="grid grid-cols-2 gap-4">
                         {features.map((item) => (
-                          <li key={item.title}>
-                            <ListItem
-                              title={item.title}
-                              href={item.href}
-                              icon={item.icon}
-                            >
-                              {item.description}
-                            </ListItem>
-                          </li>
+                          <ListItem
+                            key={item.title}
+                            title={item.title}
+                            href={item.href}
+                            icon={item.icon}
+                          >
+                            {item.description}
+                          </ListItem>
                         ))}
-                      </ul>
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-white/10">
+                        <div className="mb-2 text-sm font-medium text-white/70">Channels</div>
+                        <div className="grid grid-cols-2 gap-4">
+                          {channels.map((channel) => (
+                            <Link 
+                              key={channel.title}
+                              href={channel.href}
+                              className="flex items-center gap-4 p-3 rounded-md hover:bg-zinc-800/50 transition-colors group"
+                            >
+                              <Image
+                                src={channel.image}
+                                alt={`${channel.title} logo`}
+                                width={24}
+                                height={24}
+                                className="w-6 h-6"
+                              />
+                              <div>
+                                <div className="text-sm font-medium text-white group-hover:text-white/90">{channel.title}</div>
+                                <div className="text-xs text-white/70 group-hover:text-white/80">{channel.description}</div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -267,7 +305,7 @@ export function Header() {
                     <BookOpen className="h-4 w-4 mr-2" />
                     Resources
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-zinc-900 border border-white/10">
+                  <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
                     <div className="p-4 w-[400px]">
                       <ul className="grid gap-3">
                         {resources.map((item) => (
@@ -291,7 +329,7 @@ export function Header() {
                     <BookMarked className="h-4 w-4 mr-2" />
                     Developers
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-zinc-900 border border-white/10">
+                  <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
                     <div className="p-4 w-[400px]">
                       <ul className="grid gap-3">
                         {developers.map((item) => (
@@ -315,7 +353,7 @@ export function Header() {
                     <Building2 className="h-4 w-4 mr-2" />
                     Company
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-zinc-900 border border-white/10">
+                  <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
                     <div className="p-4 w-[400px]">
                       <ul className="grid gap-3">
                         {companyItems.map((item) => (
