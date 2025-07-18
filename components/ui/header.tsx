@@ -40,25 +40,25 @@ const features = [
     title: "AI Agents",
     href: "/features/ai-agents",
     description: "Build and deploy custom AI agents for your specific needs.",
-    icon: Bot
+    icon: "" //Bot
   },
   {
     title: "Orchestration",
     href: "/features/orchestration",
     description: "Coordinate multiple AI agents to work together seamlessly.",
-    icon: WandSparkles
+    icon: "" // WandSparkles
   },
   {
     title: "Integration Hub",
     href: "/features/integration-hub",
     description: "Connect your AI agents with popular tools and platforms.",
-    icon: Plug
+    icon: "" // Plug
   },
   {
     title: "Analytics",
     href: "/features/analytics",
     description: "Check your daily metrics and performance.",
-    icon: Activity
+    icon: "" // Activity
   }
 ];
 
@@ -82,25 +82,25 @@ const resources = [
     title: "Training",
     href: "/resources/training",
     description: "Learn how to use our platform effectively.",
-    icon: GraduationCap
+    icon: "" // GraduationCap
   },
   {
     title: "Solutions",
     href: "/resources/solutions",
     description: "Explore industry-specific solutions.",
-    icon: Lightbulb
+    icon: "" // Lightbulb
   },
   {
     title: "Blog",
     href: "/resources/blog",
     description: "Latest news, updates, and insights.",
-    icon: Newspaper
+    icon: "" // Newspaper
   },
   {
     title: "Case Studies",
     href: "/resources/case-studies",
     description: "Real-world success stories from our customers.",
-    icon: FileCheck2
+    icon: "" // FileCheck2
   },
 ];
 
@@ -109,19 +109,19 @@ const developers = [
     title: "Documentation",
     href: "/developers/docs",
     description: "Comprehensive guides and API references.",
-    icon: BookMarked
+    icon: "" // BookMarked
   },
   {
     title: "Integrations",
     href: "/developers/integrations",
     description: "Connect with your favorite tools and services.",
-    icon: Plug
+    icon: "" // Plug
   },
   {
     title: "Tutorials",
     href: "/developers/tutorials",
     description: "Step-by-step guides to get you started.",
-    icon: PlayCircle
+    icon: "" // PlayCircle
   },
 ];
 
@@ -130,43 +130,43 @@ const companyItems = [
     title: "About",
     href: "/company/about",
     description: "Learn more about our mission, values, and team.",
-    icon: Building2
+    icon: "" // Building2
   },
   {
     title: "Press",
     href: "/company/press",
     description: "Latest news and media coverage.",
-    icon: FileText
+    icon: "" // FileText
   },
   {
     title: "Careers",
     href: "/company/careers",
     description: "Join our team and help shape the future of AI.",
-    icon: Users
+    icon: "" // Users
   },
   {
     title: "Events",
     href: "/company/events",
     description: "Stay updated with our latest events and announcements.",
-    icon: Calendar
+    icon: "" // Calendar
   },
   {
     title: "Our principles",
     href: "/company/principles",
     description: "The values that guide our work and decisions.",
-    icon: Heart
+    icon: "" // Heart
   },
   {
     title: "The Tao of HashiCorp",
     href: "/company/tao",
     description: "Our philosophy and approach to technology.",
-    icon: BookOpen
+    icon: "" // BookOpen
   },
   {
     title: "Become a partner",
     href: "/company/partners",
     description: "Join our partner ecosystem.",
-    icon: Handshake
+    icon: "" // Handshake
   }
 ];
 
@@ -255,7 +255,7 @@ export function Header() {
               <NavigationMenuList className="gap-6">
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
-                    <LayoutGrid className="h-4 w-4 mr-2" />
+                    {/* <LayoutGrid className="h-4 w-4 mr-2" /> */}
                     Features
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
@@ -266,7 +266,7 @@ export function Header() {
                             key={item.title}
                             title={item.title}
                             href={item.href}
-                            icon={item.icon}
+                            // icon={item.icon}
                           >
                             {item.description}
                           </ListItem>
@@ -302,7 +302,7 @@ export function Header() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
-                    <BookOpen className="h-4 w-4 mr-2" />
+                    {/* <BookOpen className="h-4 w-4 mr-2" /> */}
                     Resources
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
@@ -313,7 +313,7 @@ export function Header() {
                             <ListItem
                               title={item.title}
                               href={item.href}
-                              icon={item.icon}
+                              // icon={item.icon}
                             >
                               {item.description}
                             </ListItem>
@@ -326,7 +326,7 @@ export function Header() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
-                    <BookMarked className="h-4 w-4 mr-2" />
+                    {/* <BookMarked className="h-4 w-4 mr-2" /> */}
                     Developers
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
@@ -337,7 +337,7 @@ export function Header() {
                             <ListItem
                               title={item.title}
                               href={item.href}
-                              icon={item.icon}
+                              // icon={item.icon}
                             >
                               {item.description}
                             </ListItem>
@@ -350,7 +350,7 @@ export function Header() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
-                    <Building2 className="h-4 w-4 mr-2" />
+                    {/* <Building2 className="h-4 w-4 mr-2" /> */}
                     Company
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
@@ -361,7 +361,7 @@ export function Header() {
                             <ListItem
                               title={item.title}
                               href={item.href}
-                              icon={item.icon}
+                              // icon={item.icon}
                             >
                               {item.description}
                             </ListItem>
