@@ -1,0 +1,95 @@
+[
+  {
+    "title": "Introduction",
+    "href": "/documentation"
+  },
+  {
+    "title": "Get Started",
+    "href": "/documentation/getting-started"
+  },
+  {
+    "title": "API",
+    "children": [
+      { "title": "Chatbot", "href": "/documentation/api/chatbot" },
+      { "title": "Communications", "href": "/documentation/api/communications" },
+      { "title": "Library", "href": "/documentation/api/library" },
+      { "title": "Feedback", "href": "/documentation/api/feedback" },
+      { "title": "HealthCheck", "href": "/documentation/api/healthcheck" },
+      { "title": "Tools", "href": "/documentation/api/tools" },
+      { "title": "Upsert", "href": "/documentation/api/upsert" },
+      { "title": "Vectors", "href": "/documentation/api/vectors" }
+    ]
+  },
+  {
+    "title": "Integration",
+    "children": [
+      {
+        "title": "LangChain",
+        "children": [
+          {
+            "title": "Agent",
+            "children": [
+              { "title": "Airtable Agent", "href": "/documentation/integration/langchain/agent/airtable-agent" },
+              { "title": "CSV Agent", "href": "/documentation/integration/langchain/agent/csv-agent" },
+              { "title": "Conversational Agent", "href": "/documentation/integration/langchain/agent/conversational-agent" },
+              { "title": "Conversational Retrieval Agent", "href": "/documentation/integration/langchain/agent/conversational-retrieval-agent" },
+              { "title": "MistralAI Tool Agent", "href": "/documentation/integration/langchain/agent/mistralai-tool-agent" },
+              { "title": "OpenAI Assistant", "href": "/documentation/integration/langchain/agent/openai-assistant" },
+              { "title": "OpenAI Function Agent", "href": "/documentation/integration/langchain/agent/openai-function-agent" },
+              { "title": "OpenAI Tool Agent", "href": "/documentation/integration/langchain/agent/openai-tool-agent" },
+              { "title": "ReAct Agent Chat", "href": "/documentation/integration/langchain/agent/react-agent-chat" },
+              { "title": "ReAct Agent LLM", "href": "/documentation/integration/langchain/agent/react-agent-llm" },
+              { "title": "Tool Agent", "href": "/documentation/integration/langchain/agent/tool-agent" },
+              { "title": "XML Agent", "href": "/documentation/integration/langchain/agent/xml-agent" }
+            ]
+          },
+          {
+            "title": "Cache",
+            "children": [
+              { "title": "InMemory Cache", "href": "/documentation/integration/langchain/cache/inmemory" },
+              { "title": "InMemory Embedding Cache", "href": "/documentation/integration/langchain/cache/inmemory-embedding" },
+              { "title": "Redis Cache", "href": "/documentation/integration/langchain/cache/redis" },
+              { "title": "Redis Embeddings Cache", "href": "/documentation/integration/langchain/cache/redis-embeddings" }
+            ]
+          },
+          {
+            "title": "Chains",
+            "children": [
+              { "title": "GET API Chain", "href": "/documentation/integration/langchain/chains/get-api" },
+              { "title": "POST API Chain", "href": "/documentation/integration/langchain/chains/post-api" },
+              { "title": "Conversation Chain", "href": "/documentation/integration/langchain/chains/conversation" },
+              { "title": "Conversational Retrieval QA Chain", "href": "/documentation/integration/langchain/chains/conversational-retrieval-qa" },
+              { "title": "LLM Chain", "href": "/documentation/integration/langchain/chains/llm" },
+              { "title": "Multi Prompt Chain", "href": "/documentation/integration/langchain/chains/multi-prompt" },
+              { "title": "Multi Retrieval QA Chain", "href": "/documentation/integration/langchain/chains/multi-retrieval-qa" },
+              { "title": "Retrieval QA Chain", "href": "/documentation/integration/langchain/chains/retrieval-qa" },
+              { "title": "Sql Database Chain", "href": "/documentation/integration/langchain/chains/sql-database" },
+              { "title": "VectorDB QA Chain", "href": "/documentation/integration/langchain/chains/vector-db-qa" }
+            ]
+          },
+          {
+            "title": "ChatModels",
+            "children": [
+              { "title": "AWS ChatBedrock", "href": "/documentation/integration/langchain/chatmodels/aws-chatbedrock" },
+              { "title": "Azure ChatOpenAI", "href": "/documentation/integration/langchain/chatmodels/azure-chatopenai" },
+              { "title": "NVIDIA NIM", "href": "/documentation/integration/langchain/chatmodels/nvidia-nim" },
+              { "title": "ChatAnthropic", "href": "/documentation/integration/langchain/chatmodels/anthropic" },
+              { "title": "ChatCohere", "href": "/documentation/integration/langchain/chatmodels/cohere" },
+              { "title": "Chat Fireworks", "href": "/documentation/integration/langchain/chatmodels/fireworks" },
+              { "title": "ChatGoogleGenerativeAI", "href": "/documentation/integration/langchain/chatmodels/google-generative-ai" },
+              { "title": "Google VertexAI", "href": "/documentation/integration/langchain/chatmodels/google-vertexai" },
+              { "title": "ChatHuggingFace", "href": "/documentation/integration/langchain/chatmodels/huggingface" },
+              { "title": "ChatLocalAI", "href": "/documentation/integration/langchain/chatmodels/localai" },
+              { "title": "ChatMistralAI", "href": "/documentation/integration/langchain/chatmodels/mistralai" },
+              { "title": "IBM Watsonx", "href": "/documentation/integration/langchain/chatmodels/ibm-watsonx" },
+              { "title": "ChatOllama", "href": "/documentation/integration/langchain/chatmodels/ollama" },
+              { "title": "ChatOpenAI", "href": "/documentation/integration/langchain/chatmodels/openai" },
+              { "title": "ChatTogetherAI", "href": "/documentation/integration/langchain/chatmodels/togetherai" },
+              { "title": "GroqChat", "href": "/documentation/integration/langchain/chatmodels/groq" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
