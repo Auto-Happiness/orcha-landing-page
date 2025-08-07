@@ -22,7 +22,7 @@ export function HeroSection() {
             </h1>
             
             <p className="text-lg text-gray-400 max-w-xl">
-              Connect and orchestrate your tasks visually with our cutting-edge tools and seamless deployment process
+              Connect and orchestrate your tasks visually with our cutting-edge tools and seamless deployment process powered by LangChain and LangGraph.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -54,7 +54,7 @@ export function HeroSection() {
             </div>
 
             <div className="flex items-center gap-2 text-sm text-gray-400">
-              <svg
+              {/* <svg
                 className="w-5 h-5 text-green-500"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -67,7 +67,7 @@ export function HeroSection() {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              No credit card required
+              No credit card required */}
               <span className="mx-2">•</span>
               <svg
                 className="w-5 h-5 text-green-500"

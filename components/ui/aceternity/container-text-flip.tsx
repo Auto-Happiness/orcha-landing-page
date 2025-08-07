@@ -46,50 +46,50 @@ export function ContainerTextFlip({
     return () => clearInterval(intervalId);
   }, [words, interval]);
  
-  return (
-    <motion.p
-      layout
-      layoutId={`words-here-${id}`}
-      animate={{ width }}
-      transition={{ duration: animationDuration / 2000 }}
-      className={cn(
-        "relative inline-block rounded-lg pt-2 pb-3 px-4 text-center text-4xl font-bold md:text-7xl",
-        "bg-gradient-to-r from-yellow-300 via-orange-300 to-rose-300",
-        "shadow-[0_0_30px_rgba(254,240,138,0.5)]", // Brighter glow effect
-        className,
-      )}
-      key={words[currentWordIndex]}
+ return (
+  <motion.div
+    layout
+    layoutId={`words-here-${id}`}
+    animate={{ width }}
+    transition={{ duration: animationDuration / 2000 }}
+    className={cn(
+      "relative inline-block rounded-lg pt-2 pb-3 px-4 text-center text-4xl font-bold md:text-7xl",
+      "bg-gradient-to-r from-yellow-300 via-orange-300 to-rose-300",
+      "shadow-[0_0_30px_rgba(254,240,138,0.5)]",
+      className,
+    )}
+    key={words[currentWordIndex]}
+  >
+    <motion.div
+      transition={{
+        duration: animationDuration / 1000,
+        ease: "easeInOut",
+      }}
+      className={cn("inline-block text-gray-900", textClassName)}
+      ref={textRef}
+      layoutId={`word-div-${words[currentWordIndex]}-${id}`}
     >
-      <motion.div
-        transition={{
-          duration: animationDuration / 1000,
-          ease: "easeInOut",
-        }}
-        className={cn("inline-block text-gray-900", textClassName)} // Dark text for better contrast
-        ref={textRef}
-        layoutId={`word-div-${words[currentWordIndex]}-${id}`}
-      >
-        <motion.div className="inline-block">
-          {words[currentWordIndex].split("").map((letter, index) => (
-            <motion.span
-              key={index}
-              initial={{
-                opacity: 0,
-                filter: "blur(10px)",
-              }}
-              animate={{
-                opacity: 1,
-                filter: "blur(0px)",
-              }}
-              transition={{
-                delay: index * 0.02,
-              }}
-            >
-              {letter}
-            </motion.span>
-          ))}
-        </motion.div>
+      <motion.div className="inline-block">
+        {words[currentWordIndex].split("").map((letter, index) => (
+          <motion.span
+            key={index}
+            initial={{
+              opacity: 0,
+              filter: "blur(10px)",
+            }}
+            animate={{
+              opacity: 1,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              delay: index * 0.02,
+            }}
+          >
+            {letter}
+          </motion.span>
+        ))}
       </motion.div>
-    </motion.p>
-  );
+    </motion.div>
+  </motion.div>
+);
 } 
