@@ -128,7 +128,7 @@ export function Footer() {
 
   return (
     <motion.footer
-      className="bg-black/50 backdrop-blur-lg border-t border-white/10 pt-12 pb-8 px-6"
+      className="bg-black/50 backdrop-blur-lg border-t bg-gray-900 border-white/10 pt-12 pb-8 px-6"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

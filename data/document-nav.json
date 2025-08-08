@@ -1,7 +1,7 @@
 [
   {
     "title": "Introduction",
-    "href": "/documentation"
+    "href": "/docs/intro"
   },
   {
     "title": "Get Started",
@@ -34,7 +34,6 @@
               { "title": "Conversational Agent", "href": "/documentation/integration/langchain/agent/conversational-agent" },
               { "title": "Conversational Retrieval Agent", "href": "/documentation/integration/langchain/agent/conversational-retrieval-agent" },
               { "title": "MistralAI Tool Agent", "href": "/documentation/integration/langchain/agent/mistralai-tool-agent" },
-              { "title": "OpenAI Assistant", "href": "/documentation/integration/langchain/agent/openai-assistant" },
               { "title": "OpenAI Function Agent", "href": "/documentation/integration/langchain/agent/openai-function-agent" },
               { "title": "OpenAI Tool Agent", "href": "/documentation/integration/langchain/agent/openai-tool-agent" },
               { "title": "ReAct Agent Chat", "href": "/documentation/integration/langchain/agent/react-agent-chat" },
@@ -70,21 +69,15 @@
           {
             "title": "ChatModels",
             "children": [
-              { "title": "AWS ChatBedrock", "href": "/documentation/integration/langchain/chatmodels/aws-chatbedrock" },
-              { "title": "Azure ChatOpenAI", "href": "/documentation/integration/langchain/chatmodels/azure-chatopenai" },
               { "title": "NVIDIA NIM", "href": "/documentation/integration/langchain/chatmodels/nvidia-nim" },
               { "title": "ChatAnthropic", "href": "/documentation/integration/langchain/chatmodels/anthropic" },
-              { "title": "ChatCohere", "href": "/documentation/integration/langchain/chatmodels/cohere" },
-              { "title": "Chat Fireworks", "href": "/documentation/integration/langchain/chatmodels/fireworks" },
               { "title": "ChatGoogleGenerativeAI", "href": "/documentation/integration/langchain/chatmodels/google-generative-ai" },
               { "title": "Google VertexAI", "href": "/documentation/integration/langchain/chatmodels/google-vertexai" },
               { "title": "ChatHuggingFace", "href": "/documentation/integration/langchain/chatmodels/huggingface" },
               { "title": "ChatLocalAI", "href": "/documentation/integration/langchain/chatmodels/localai" },
               { "title": "ChatMistralAI", "href": "/documentation/integration/langchain/chatmodels/mistralai" },
-              { "title": "IBM Watsonx", "href": "/documentation/integration/langchain/chatmodels/ibm-watsonx" },
               { "title": "ChatOllama", "href": "/documentation/integration/langchain/chatmodels/ollama" },
               { "title": "ChatOpenAI", "href": "/documentation/integration/langchain/chatmodels/openai" },
-              { "title": "ChatTogetherAI", "href": "/documentation/integration/langchain/chatmodels/togetherai" },
               { "title": "GroqChat", "href": "/documentation/integration/langchain/chatmodels/groq" }
             ]
           }
