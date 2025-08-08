@@ -107,7 +107,7 @@ const resources = [
 const developers = [
   {
     title: "Documentation",
-    href: "/developers/docs",
+    href: "/docs/intro",
     description: "Comprehensive guides and API references.",
     icon: "" // BookMarked
   },
