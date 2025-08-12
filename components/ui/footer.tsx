@@ -4,26 +4,21 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 const footerLinks = {
   products: [
     {
-      title: "AI Agents",
-      href: "/products/ai-agents",
+      title: "Orcha AI",
+      href: "/products/orcha-ai",
     },
+    // {
+    //   title: "SAP Development",
+    //   href: "/products/sap",
+    // },
     {
-      title: "Orchestration",
-      href: "/products/orchestration",
-    },
-    {
-      title: "Integration Hub",
-      href: "/products/integration-hub",
-    },
-    {
-      title: "Analytics",
-      href: "/products/analytics",
-    },
+      title: "Software Solutions",
+      href: "/products/software-development",
+    }
   ],
   company: [
     {
