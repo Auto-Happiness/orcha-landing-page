@@ -1,21 +1,42 @@
+"use client"
+import { useState } from "react";
+import Image from "next/image";
+
+import ollamademo from "@/assets/ollamademo.png";
+import openaidemo from "@/assets/openai demo.png";
+import bgImage from '@/assets/orcha-bg.png';
 
 
 export default function OrchaAiPage() {
+    const [selectedImage, setSelectedImage] = useState('');
+
   return (
     <>
       {/* Hero Section */}
-      <section className="py-20 bg-black text-white text-center px-6">
+     <section
+      className="py-20 text-white text-center px-6 bg-black bg-cover bg-center relative"
+      style={{ backgroundImage: `url(${bgImage.src})` }}
+    >
+      {/* Overlay for contrast */}
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
+      {/* Content above overlay */}
+      <div className="relative max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Build AI Agents Visually with <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">Orcha AI</span>
+          Build AI Agents Visually with{' '}
+          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+            Orcha AI
+          </span>
         </h1>
         <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
-          Orcha AI empowers you to create, connect, and deploy AI-powered workflows 
+          Orcha AI empowers you to create, connect, and deploy AI-powered workflows
           without writing a single line of code powered by LangChain and LangGraph.
         </p>
         <button className="px-8 py-3 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium hover:opacity-90 transition">
-          Get Started 
+          Get Started
         </button>
-      </section>
+      </div>
+    </section>
 
       {/* Key Features */}
       <section className="py-20 bg-gray-900 px-6">
@@ -70,19 +91,66 @@ export default function OrchaAiPage() {
       </section>
 
       {/* Screenshots / Demo */}
-      <section className="py-20 bg-gray-900 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">See Orcha AI in Action</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-800 rounded-xl h-64 flex items-center justify-center text-gray-500">
-              Screenshot / Demo 1
-            </div>
-            <div className="bg-gray-800 rounded-xl h-64 flex items-center justify-center text-gray-500">
-              Screenshot / Demo 2
-            </div>
+       <section className="py-20 bg-gray-900 px-6">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+      See Orcha AI in Action
+    </h2>
+    <div className="grid md:grid-cols-2 gap-8">
+      {/* First Image */}
+      <div
+        className="relative bg-gray-800 rounded-xl h-64 cursor-pointer overflow-hidden group"
+        onClick={() => setSelectedImage(openaidemo.src)}
+      >
+        <Image
+          src={openaidemo}
+          alt="Orcha AI Demo 1"
+          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+          <p className="text-white text-lg">
+            Build a basic chatbot with Open AI and control its prompt.
+          </p>
+        </div>
+      </div>
+
+      {/* Second Image */}
+      <div
+        className="relative bg-gray-800 rounded-xl h-64 cursor-pointer overflow-hidden group"
+        onClick={() => setSelectedImage(ollamademo.src)}
+      >
+        <Image
+          src={ollamademo}
+          alt="Orcha AI Demo 2"
+          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+          <p className="text-white text-lg">
+                        Build a chatbot that can communicate with your own private data with Ollama.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={() => setSelectedImage('')}
+        >
+          <div className="max-w-4xl max-h-[90%]">
+            <img
+              src={selectedImage}
+              alt="Enlarged view"
+              className="rounded-lg object-contain max-h-screen"
+            />
           </div>
         </div>
-      </section>
+      )}
 
       {/* Call to Action */}
       <section className="py-20 bg-black text-center px-6">
