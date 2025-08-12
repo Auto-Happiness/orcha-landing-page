@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { PricingDrawer } from "./pricing-drawer";
+import logo from "@/assets/definitve-logo.png"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,68 +15,44 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { useScroll, motion, useMotionValueEvent } from "framer-motion";
-import { 
-  Building2, 
-  FileText, 
-  Users, 
-  Calendar, 
-  Heart, 
-  BookOpen, 
-  Handshake,
-  LayoutGrid,
-  Bot,
-  Lightbulb,
-  GraduationCap,
-  Newspaper,
-  FileCheck2,
-  BookMarked,
-  Plug,
-  PlayCircle,
-  Activity,
-  WandSparkles
-} from "lucide-react";
 
-const features = [
+
+const products = [
   {
-    title: "AI Agents",
-    href: "/features/ai-agents",
-    description: "Build and deploy custom AI agents for your specific needs.",
+    title: "Orcha AI",
+    href: "/products/orcha-ai",
+    description: "No code editor to build your LLM apllication",
     icon: "" //Bot
   },
-  {
-    title: "Orchestration",
-    href: "/features/orchestration",
-    description: "Coordinate multiple AI agents to work together seamlessly.",
-    icon: "" // WandSparkles
+   {
+    title: "Software Development",
+    href: "/products/software-development",
+    description: "No code editor to build your LLM apllication",
+    icon: "" //Bot
   },
-  {
-    title: "Integration Hub",
-    href: "/features/integration-hub",
-    description: "Connect your AI agents with popular tools and platforms.",
-    icon: "" // Plug
-  },
-  {
-    title: "Analytics",
-    href: "/features/analytics",
-    description: "Check your daily metrics and performance.",
-    icon: "" // Activity
-  }
+  // {
+  //   title: "SAP Development",
+  //   href: "/products/sap",
+  //   description: "We can build your SAP business tools for you.",
+  //   icon: "" //Bot
+  // },
+ 
 ];
 
-const channels = [
-  {
-    title: "Discord",
-    href: "/features/channels/discord",
-    description: "Connect and manage your AI agents through Discord.",
-    image: "/platforms/discord-logo.svg"
-  },
-  {
-    title: "Slack",
-    href: "/features/channels/slack",
-    description: "Integrate AI agents directly into your Slack workspace.",
-    image: "/platforms/slack-logo.svg"
-  }
-];
+ const channels = [
+  //  {
+  //    title: "Discord",
+  //    href: "/features/channels/discord",
+  //    description: "Connect and manage your AI agents through Discord.",
+  //    image: "/platforms/discord-logo.svg"
+  //  },
+  //  {
+  //    title: "Slack",
+  //    href: "/features/channels/slack",
+  //    description: "Integrate AI agents directly into your Slack workspace.",
+  //    image: "/platforms/slack-logo.svg"
+  //  }
+ ];
 
 const resources = [
   {
@@ -239,29 +216,28 @@ export function Header() {
         <nav className="container mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src="/placeholder-logo.svg"
-                alt="Orcha Logo"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
-              <span className="text-xl font-bold text-white">Orcha</span>
-            </Link>
+  <Image
+    src={logo}
+    alt="Orcha Logo"
+    width={42}
+    height={42}
+    className="object-contain"
+  />
+  <span className="text-xl font-bold text-white">Orcha</span>
+</Link>
           </div>
-
           <div className="flex-1 flex justify-center">
             <NavigationMenu>
               <NavigationMenuList className="gap-6">
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
                     {/* <LayoutGrid className="h-4 w-4 mr-2" /> */}
-                    Features
+                    Products
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
                     <div className="p-4 w-[600px]">
                       <div className="grid grid-cols-2 gap-4">
-                        {features.map((item) => (
+                        {products.map((item) => (
                           <ListItem
                             key={item.title}
                             title={item.title}
@@ -272,7 +248,7 @@ export function Header() {
                           </ListItem>
                         ))}
                       </div>
-                      <div className="mt-4 pt-4 border-t border-white/10">
+                      {/* <div className="mt-4 pt-4 border-t border-white/10">
                         <div className="mb-2 text-sm font-medium text-white/70">Channels</div>
                         <div className="grid grid-cols-2 gap-4">
                           {channels.map((channel) => (
@@ -295,14 +271,13 @@ export function Header() {
                             </Link>
                           ))}
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
-
+                {/* 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
-                    {/* <BookOpen className="h-4 w-4 mr-2" /> */}
                     Resources
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
@@ -313,7 +288,6 @@ export function Header() {
                             <ListItem
                               title={item.title}
                               href={item.href}
-                              // icon={item.icon}
                             >
                               {item.description}
                             </ListItem>
@@ -322,7 +296,7 @@ export function Header() {
                       </ul>
                     </div>
                   </NavigationMenuContent>
-                </NavigationMenuItem>
+                </NavigationMenuItem> */}
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
@@ -372,9 +346,9 @@ export function Header() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
+                {/* <NavigationMenuItem>
                   <PricingDrawer />
-                </NavigationMenuItem>
+                </NavigationMenuItem> */}
               </NavigationMenuList>
             </NavigationMenu>
           </div>
