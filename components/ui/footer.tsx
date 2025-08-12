@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import orchaicon from '@/assets/definitve-logo.png'
+
 const footerLinks = {
   products: [
     {
@@ -36,7 +38,7 @@ const footerLinks = {
   ],
   resources: [
     {
-      title: "Documentation",
+      title: "Orcha Ai Documentation",
       href: "/docs",
     },
     {
@@ -49,7 +51,7 @@ const footerLinks = {
     },
     {
       title: "GitHub",
-      href: "https://github.com/orcha",
+      href: "https://github.com/Auto-Happiness",
     },
   ],
   legal: [
@@ -196,7 +198,7 @@ export function Footer() {
           <div className="flex items-center space-x-4 mb-4 md:mb-0">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/placeholder-logo.svg"
+                src={orchaicon}
                 alt="Orcha Logo"
                 width={32}
                 height={32}

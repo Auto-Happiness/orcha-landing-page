@@ -27,7 +27,7 @@ const products = [
    {
     title: "Software Development",
     href: "/products/software-development",
-    description: "No code editor to build your LLM apllication",
+    description: "We design and build modern, scalable, and secure applications tailored to your business goals",
     icon: "" //Bot
   },
   // {
@@ -83,7 +83,7 @@ const resources = [
 
 const developers = [
   {
-    title: "Documentation",
+    title: "Orcha AI Documentation",
     href: "/docs/intro",
     description: "Comprehensive guides and API references.",
     icon: "" // BookMarked
