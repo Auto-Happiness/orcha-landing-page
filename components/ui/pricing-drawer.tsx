@@ -21,10 +21,8 @@ const tiers = [
     price: "$27",
     description: "Perfect for trying out our platform.",
     features: [
-      "1k messages",
-      "1 live chatbot agent",
-      "Basic features",
-      "Community support"
+      "10k Communications",
+      "1GB of storage",
     ],
   },
   {
@@ -33,9 +31,9 @@ const tiers = [
     price: "$89",
     description: "For businesses requiring better limits, additional integration, features, and premium support.",
     features: [
-      "10k messages",
-      "5 live chatbot agents",
-      "Real-time data from the web with search",
+      "50k Communications",
+      "10 GB of storage",
+      "Gain Access early for new features",
       "Support over live chat"
     ],
   },
@@ -55,33 +53,33 @@ const tiers = [
     name: "Enterprise",
     id: "tier-enterprise",
     price: "Custom",
-    description: "Flexible, consumption-based pricing where you only pay for what you use—no upfront costs, no contracts.", // CHANGE DESCRIPTION
+    description: "Flexible, consumption-based pricing where you only pay for what you use no upfront costs, no contracts.", // CHANGE DESCRIPTION
     features: [
-      "Unlimited messages",
+      "Unlimited communications",
       "Unlimited features",
       "Premium support"
     ],
-  },
-  {
-    name: "Self Managed",
-    id: "tier-selfmanaged",
-    price: "",
-    description: "Self-hosted solution with full control over configuration, infrastructure, and security—designed for teams that need complete autonomy.",
-    features: [
-      "Unlimited messages",
-      "Unlimited features",
-      "Self hosting",
-      "Premium support"
-    ],
-  },
+  }
+  // {
+  //   name: "Self Managed",
+  //   id: "tier-selfmanaged",
+  //   price: "",
+  //   description: "Self-hosted solution with full control over configuration, infrastructure, and security—designed for teams that need complete autonomy.",
+  //   features: [
+  //     "Unlimited messages",
+  //     "Unlimited features",
+  //     "Self hosting",
+  //     "Premium support"
+  //   ],
+  // },
 ];
 
 export function PricingDrawer() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <button className="text-sm font-medium text-white/70 hover:text-white transition-colors">
-          Pricing
+        <button className="px-8 py-3 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium hover:opacity-90 transition">
+          Get Started
         </button>
       </DrawerTrigger>
       <DrawerContent className="bg-black h-[90vh]">

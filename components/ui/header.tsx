@@ -105,46 +105,46 @@ const developers = [
 const companyItems = [
   {
     title: "About",
-    href: "/company/about",
+    href: "/about",
     description: "Learn more about our mission, values, and team.",
     icon: "" // Building2
   },
-  {
-    title: "Press",
-    href: "/company/press",
-    description: "Latest news and media coverage.",
-    icon: "" // FileText
-  },
-  {
-    title: "Careers",
-    href: "/company/careers",
-    description: "Join our team and help shape the future of AI.",
-    icon: "" // Users
-  },
-  {
-    title: "Events",
-    href: "/company/events",
-    description: "Stay updated with our latest events and announcements.",
-    icon: "" // Calendar
-  },
-  {
-    title: "Our principles",
-    href: "/company/principles",
-    description: "The values that guide our work and decisions.",
-    icon: "" // Heart
-  },
-  {
-    title: "The Tao of HashiCorp",
-    href: "/company/tao",
-    description: "Our philosophy and approach to technology.",
-    icon: "" // BookOpen
-  },
-  {
-    title: "Become a partner",
-    href: "/company/partners",
-    description: "Join our partner ecosystem.",
-    icon: "" // Handshake
-  }
+  // {
+  //   title: "Press",
+  //   href: "/company/press",
+  //   description: "Latest news and media coverage.",
+  //   icon: "" // FileText
+  // },
+  // {
+  //   title: "Careers",
+  //   href: "/company/careers",
+  //   description: "Join our team and help shape the future of AI.",
+  //   icon: "" // Users
+  // },
+  // {
+  //   title: "Events",
+  //   href: "/company/events",
+  //   description: "Stay updated with our latest events and announcements.",
+  //   icon: "" // Calendar
+  // },
+  // {
+  //   title: "Our principles",
+  //   href: "/company/principles",
+  //   description: "The values that guide our work and decisions.",
+  //   icon: "" // Heart
+  // },
+  // {
+  //   title: "The Tao of HashiCorp",
+  //   href: "/company/tao",
+  //   description: "Our philosophy and approach to technology.",
+  //   icon: "" // BookOpen
+  // },
+  // {
+  //   title: "Become a partner",
+  //   href: "/company/partners",
+  //   description: "Join our partner ecosystem.",
+  //   icon: "" // Handshake
+  // }
 ];
 
 interface ListItemProps {
@@ -227,8 +227,17 @@ export function Header() {
 </Link>
           </div>
           <div className="flex-1 flex justify-center">
+              <div className="flex items-center gap-2 ">
+             <Link
+                      href="/"
+                      className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1"
+                    >
+                      Home
+                    </Link></div>
             <NavigationMenu>
-              <NavigationMenuList className="gap-6">
+              <NavigationMenuList className="gap-2">
+
+            
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
                     {/* <LayoutGrid className="h-4 w-4 mr-2" /> */}
@@ -299,10 +308,9 @@ export function Header() {
                 </NavigationMenuItem> */}
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
-                    {/* <BookMarked className="h-4 w-4 mr-2" /> */}
+                  {/* <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
                     Developers
-                  </NavigationMenuTrigger>
+                  </NavigationMenuTrigger> */}
                   <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
                     <div className="p-4 w-[400px]">
                       <ul className="grid gap-3">
@@ -352,7 +360,6 @@ export function Header() {
               </NavigationMenuList>
             </NavigationMenu>
           </div>
-
           <div className="flex items-center">
             <Link
               href="/login"

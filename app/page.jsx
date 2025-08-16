@@ -1,20 +1,19 @@
 "use client"
 import { HeroSection } from "@/components/ui/hero-section";
 import Link from "next/link";
-import city from "@/assets/city.png"
+import city from "@/assets/orcas-working.png"
 
 export default function Home() {
   return (
     <main className="bg-gray-900"> 
       <HeroSection />
 
-      {/* About Us Section */}
      <section className="py-24 bg-gray-900 text-white px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           
           <div className="flex justify-center">
             <img
-              src={city}
+              src={city.src}
               alt="About Orcha Solutions"
               className="rounded-lg shadow-lg max-w-full h-auto"
             />
@@ -43,7 +42,7 @@ export default function Home() {
       What We Offer
     </h2>
 
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="grid md:grid-cols-2 gap-8">
       {/* Card 1 */}
       <div className="relative rounded-lg overflow-hidden shadow-lg group">
         <img
