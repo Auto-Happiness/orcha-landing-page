@@ -5,6 +5,7 @@ import Image from "next/image";
 import ollamademo from "@/assets/ollamademo.png";
 import openaidemo from "@/assets/openai demo.png";
 import bgImage from '@/assets/orcha-bg.png';
+import { PricingDrawer } from "@/components/ui/pricing-drawer";
 
 
 export default function OrchaAiPage() {
@@ -32,9 +33,11 @@ export default function OrchaAiPage() {
           Orcha AI empowers you to create, connect, and deploy AI-powered workflows
           without writing a single line of code powered by LangChain and LangGraph.
         </p>
-        <button className="px-8 py-3 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium hover:opacity-90 transition">
+        {/* <button className="px-8 py-3 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium hover:opacity-90 transition">
           Get Started
-        </button>
+        </button> */}
+        &nbsp;
+        <PricingDrawer/>
       </div>
     </section>
 

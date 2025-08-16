@@ -25,30 +25,30 @@ const footerLinks = {
   company: [
     {
       title: "About",
-      href: "/company/about",
+      href: "/about",
     },
-    {
-      title: "Events",
-      href: "/company/events",
-    },
-    {
-      title: "Careers",
-      href: "/company/careers",
-    },
+    // {
+    //   title: "Events",
+    //   href: "/company/events",
+    // },
+    // {
+    //   title: "Careers",
+    //   href: "/company/careers",
+    // },
   ],
   resources: [
     {
       title: "Orcha Ai Documentation",
       href: "/docs",
     },
-    {
-      title: "Blog",
-      href: "/blog",
-    },
-    {
-      title: "Community",
-      href: "/community",
-    },
+    // {
+    //   title: "Blog",
+    //   href: "/blog",
+    // },
+    // {
+    //   title: "Community",
+    //   href: "/community",
+    // },
     {
       title: "GitHub",
       href: "https://github.com/Auto-Happiness",
