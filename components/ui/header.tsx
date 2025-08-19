@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { PricingDrawer } from "./pricing-drawer";
-import logo from "@/assets/definitve-logo.png"
+import logo from "@/assets/definitve-logo.png";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,19 +16,19 @@ import {
 } from "@/components/ui/navigation-menu";
 import { useScroll, motion, useMotionValueEvent } from "framer-motion";
 
-
 const products = [
   {
     title: "Orcha AI",
     href: "/products/orcha-ai",
     description: "No code editor to build your LLM apllication",
-    icon: "" //Bot
+    icon: "", //Bot
   },
-   {
+  {
     title: "Software Development",
     href: "/products/software-development",
-    description: "We design and build modern, scalable, and secure applications tailored to your business goals",
-    icon: "" //Bot
+    description:
+      "We design and build modern, scalable, and secure applications tailored to your business goals",
+    icon: "", //Bot
   },
   // {
   //   title: "SAP Development",
@@ -36,10 +36,9 @@ const products = [
   //   description: "We can build your SAP business tools for you.",
   //   icon: "" //Bot
   // },
- 
 ];
 
- const channels = [
+const channels = [
   //  {
   //    title: "Discord",
   //    href: "/features/channels/discord",
@@ -52,32 +51,32 @@ const products = [
   //    description: "Integrate AI agents directly into your Slack workspace.",
   //    image: "/platforms/slack-logo.svg"
   //  }
- ];
+];
 
 const resources = [
   {
     title: "Training",
     href: "/resources/training",
     description: "Learn how to use our platform effectively.",
-    icon: "" // GraduationCap
+    icon: "", // GraduationCap
   },
   {
     title: "Solutions",
     href: "/resources/solutions",
     description: "Explore industry-specific solutions.",
-    icon: "" // Lightbulb
+    icon: "", // Lightbulb
   },
   {
     title: "Blog",
     href: "/resources/blog",
     description: "Latest news, updates, and insights.",
-    icon: "" // Newspaper
+    icon: "", // Newspaper
   },
   {
     title: "Case Studies",
     href: "/resources/case-studies",
     description: "Real-world success stories from our customers.",
-    icon: "" // FileCheck2
+    icon: "", // FileCheck2
   },
 ];
 
@@ -86,19 +85,19 @@ const developers = [
     title: "Orcha AI Documentation",
     href: "/docs/intro",
     description: "Comprehensive guides and API references.",
-    icon: "" // BookMarked
+    icon: "", // BookMarked
   },
   {
     title: "Integrations",
     href: "/developers/integrations",
     description: "Connect with your favorite tools and services.",
-    icon: "" // Plug
+    icon: "", // Plug
   },
   {
     title: "Tutorials",
     href: "/developers/tutorials",
     description: "Step-by-step guides to get you started.",
-    icon: "" // PlayCircle
+    icon: "", // PlayCircle
   },
 ];
 
@@ -107,7 +106,7 @@ const companyItems = [
     title: "About",
     href: "/about",
     description: "Learn more about our mission, values, and team.",
-    icon: "" // Building2
+    icon: "", // Building2
   },
   // {
   //   title: "Press",
@@ -156,7 +155,14 @@ interface ListItemProps {
   children?: React.ReactNode;
 }
 
-function ListItem({ className, title, children, icon: Icon, href, ...props }: ListItemProps) {
+function ListItem({
+  className,
+  title,
+  children,
+  icon: Icon,
+  href,
+  ...props
+}: ListItemProps) {
   return (
     <NavigationMenuLink asChild>
       <motion.div
@@ -169,7 +175,9 @@ function ListItem({ className, title, children, icon: Icon, href, ...props }: Li
       >
         <Link href={href || "#"} className="block">
           <div className="flex items-center gap-3 text-sm font-medium leading-none text-white">
-            {Icon && <Icon className="h-4 w-4 text-gray-400 group-hover:text-white transition-colors" />}
+            {Icon && (
+              <Icon className="h-4 w-4 text-gray-400 group-hover:text-white transition-colors" />
+            )}
             <span>{title}</span>
           </div>
           {children && (
@@ -216,30 +224,29 @@ export function Header() {
         <nav className="container mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-  <Image
-    src={logo}
-    alt="Orcha Logo"
-    width={42}
-    height={42}
-    className="object-contain"
-  />
-  <span className="text-xl font-bold text-white">Orcha</span>
-</Link>
+              <Image
+                src={logo}
+                alt="Orcha Logo"
+                width={42}
+                height={42}
+                className="object-contain"
+              />
+              <span className="text-xl font-bold text-white">Orcha</span>
+            </Link>
           </div>
           <div className="flex-1 flex justify-center">
-              <div className="flex items-center gap-2 ">
-             <Link
-                      href="/"
-                      className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1"
-                    >
-                      Home
-                    </Link></div>
             <NavigationMenu>
               <NavigationMenuList className="gap-2">
-
-            
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
+                  <Link
+                    href="/"
+                    className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1"
+                  >
+                    Home
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1">
                     {/* <LayoutGrid className="h-4 w-4 mr-2" /> */}
                     Products
                   </NavigationMenuTrigger>
@@ -307,10 +314,10 @@ export function Header() {
                   </NavigationMenuContent>
                 </NavigationMenuItem> */}
 
-                <NavigationMenuItem>
-                  {/* <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
+                {/* <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
                     Developers
-                  </NavigationMenuTrigger> */}
+                  </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-zinc-900 border border-white/10 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0">
                     <div className="p-4 w-[400px]">
                       <ul className="grid gap-3">
@@ -328,10 +335,10 @@ export function Header() {
                       </ul>
                     </div>
                   </NavigationMenuContent>
-                </NavigationMenuItem>
+                </NavigationMenuItem> */}
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent">
+                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1">
                     {/* <Building2 className="h-4 w-4 mr-2" /> */}
                     Company
                   </NavigationMenuTrigger>
@@ -372,4 +379,4 @@ export function Header() {
       </motion.header>
     </div>
   );
-} 
+}
