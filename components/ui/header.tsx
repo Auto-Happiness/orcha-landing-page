@@ -20,7 +20,7 @@ const products = [
   {
     title: "Orcha AI",
     href: "/products/orcha-ai",
-    description: "No code editor to build your LLM apllication",
+    description: "No code editor to build your LLM applications",
     icon: "", //Bot
   },
   {
