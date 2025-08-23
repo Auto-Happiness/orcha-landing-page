@@ -162,7 +162,7 @@ export default function OrchaAiPage() {
           Join developers, teams, and businesses creating the next generation of AI-powered applications.
         </p>
         <button className="px-8 py-3 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium hover:opacity-90 transition">
-          Sign Up for a 14 day free tial
+          Sign Up for a 14 day free trial
         </button>
       </section>
     </>
