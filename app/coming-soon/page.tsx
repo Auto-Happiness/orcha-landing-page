@@ -1,0 +1,24 @@
+import React from "react";
+
+export default function DocsComingSoon() {
+  return (
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-black via-zinc-900 to-gray-900 text-white px-4">
+      <div className="flex flex-col items-center gap-6 animate-fade-in">
+        <div className="relative">
+          <span className="absolute -top-8 left-1/2 -translate-x-1/2 w-32 h-32 bg-purple-600/30 rounded-full blur-2xl animate-pulse" />
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 drop-shadow-lg">
+            Coming Soon
+          </h1>
+        </div>
+        <p className="text-lg md:text-2xl text-gray-300 max-w-xl text-center">
+          Our documentation is on its way! We’re working hard to bring you guides, API references, and more. Stay tuned!
+        </p>
+        <div className="flex gap-2 mt-4">
+          <span className="w-3 h-3 rounded-full bg-purple-400 animate-bounce" style={{ animationDelay: '0s' }} />
+          <span className="w-3 h-3 rounded-full bg-pink-400 animate-bounce" style={{ animationDelay: '0.2s' }} />
+          <span className="w-3 h-3 rounded-full bg-blue-400 animate-bounce" style={{ animationDelay: '0.4s' }} />
+        </div>
+      </div>
+    </main>
+  );
+}

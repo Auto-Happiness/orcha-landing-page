@@ -120,10 +120,10 @@ export default function Home() {
             Contact Us
           </h2>
           <p className="text-lg text-gray-400 mb-6">
-            Have a project in mind? Let’s talk — our team is ready to bring your vision to life with Orcha's expertise.
+            Have a project in mind? Let’s talk - our team is ready to bring your vision to life with Orcha's expertise.
           </p>
           <a
-            href="/contact"
+            href="/coming-soon" // contacts
             className="inline-block px-8 py-3 bg-gray-800 rounded-lg text-white font-medium border border-gray-700 hover:bg-gray-700 transition"
           >
             Get in Touch

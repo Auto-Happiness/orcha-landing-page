@@ -248,7 +248,7 @@ export function Header() {
                 
                 <NavigationMenuItem>
                   <Link
-                    href="/docs"
+                    href="/coming-soon" // "docs"
                     className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1">
                     Docs
                   </Link>
@@ -378,7 +378,7 @@ export function Header() {
           </div>
           <div className="flex items-center">
             <Link
-              href="/login"
+              href="/coming-soon" // "/login"
               className="text-sm font-medium text-white/70 hover:text-white transition-colors px-4 py-2 rounded-full hover:bg-zinc-800"
             >
               Login

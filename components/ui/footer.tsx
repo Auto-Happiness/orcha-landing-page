@@ -51,7 +51,7 @@ const footerLinks = {
     // },
     {
       title: "GitHub",
-      href: "https://github.com/Auto-Happiness",
+      href: ""//"https://github.com/Auto-Happiness",
     },
   ],
   legal: [
