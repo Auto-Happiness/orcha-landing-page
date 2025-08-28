@@ -61,7 +61,7 @@ const footerLinks = {
     },
     {
       title: "Terms of Service",
-      href: "/coming-soon",
+      href: "/terms-of-service",
     },
     {
       title: "Cookie Policy",
