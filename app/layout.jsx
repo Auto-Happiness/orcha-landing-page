@@ -21,7 +21,9 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Header />
-          {children}
+          <div className="bg-gray-900 min-h-screen">
+            {children}
+          </div>
           <Footer />
         </ThemeProvider>
       </body>
