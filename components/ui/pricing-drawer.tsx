@@ -57,6 +57,7 @@ const tiers = [
     features: [
       "Unlimited communications",
       "Unlimited features",
+      "Unlimited custom tool",
       "Premium support"
     ],
   }

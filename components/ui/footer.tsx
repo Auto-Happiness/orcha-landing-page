@@ -57,15 +57,15 @@ const footerLinks = {
   legal: [
     {
       title: "Privacy Policy",
-      href: "/legal/privacy",
+      href: "/coming-soon",
     },
     {
       title: "Terms of Service",
-      href: "/legal/terms",
+      href: "/coming-soon",
     },
     {
       title: "Cookie Policy",
-      href: "/legal/cookies",
+      href: "/coming-soon",
     },
   ],
 };
