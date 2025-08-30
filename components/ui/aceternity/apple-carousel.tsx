@@ -4,13 +4,15 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
+import embLogo from "@/assets/emb-logo.png";
 
 interface Card {
   id: number;
   title: string;
-  category: string;
+  category?: string;
   description: string;
   image: string;
+  logo?: string;
 }
 
 export const AppleCarousel = ({ items }: { items: Card[] }) => {
@@ -47,7 +49,15 @@ export const AppleCarousel = ({ items }: { items: Card[] }) => {
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
 
+    // Auto-slide every 5 seconds
+    const interval = setInterval(() => {
+      if (emblaApi) {
+        emblaApi.scrollNext();
+      }
+    }, 5000);
+
     return () => {
+      clearInterval(interval);
       emblaApi.off("select", onSelect);
       emblaApi.off("reInit", onSelect);
     };
@@ -69,19 +79,37 @@ export const AppleCarousel = ({ items }: { items: Card[] }) => {
               <div
                 data-card
                 onClick={() => setActiveCard(activeCard === item.id ? null : item.id)}
-                className="group relative h-[30rem] w-[70rem] overflow-hidden rounded-xl bg-neutral-200 cursor-pointer mx-auto"
+                className="group relative h-[25rem] w-[52rem] overflow-hidden rounded-xl bg-neutral-200 cursor-pointer mx-auto flex flex-col justify-center items-center"
               >
                 <div className="absolute inset-0 z-10 bg-black/40 transition-colors group-hover:bg-black/30" />
                 <img
                   src={item.image}
-                  alt={item.title}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  alt={item.description}
+                  className="absolute inset-0 h-full w-full object-cover blur-sm scale-105 z-0"
                 />
-                <div className="absolute bottom-0 left-0 z-20 w-full p-6">
-                  <p className="text-sm font-medium text-white mb-2">{item.category}</p>
-                  <h3 className="mt-2 text-3xl font-semibold text-white">{item.title}</h3>
-                  <p className="text-white/80 mt-2 line-clamp-2">{item.description}</p>
-                </div>
+                {item.id === 1 ? (
+                  <div className="relative z-20 flex flex-col items-center justify-center h-full w-full px-8">
+                    {/* Icon at top center */}
+                    <div className="mb-4 mt-8">
+                      <img src={item.logo || embLogo.src} alt="EMB Logo" width={80} height={80} className="mx-auto rounded-xl bg-black/40 p-2" />
+                    </div>
+                    {/* Compressed description */}
+                    <div className="flex-2 flex items-center justify-center w-full">
+                      <p className="text-lg md:text-xl font-semibold text-white text-center leading-tight drop-shadow-lg max-w-2xl mx-auto">
+                        {item.description}
+                      </p>
+                    </div>
+                    {/* Title at bottom, small italic */}
+                    <div className="mt-4 mb-4 w-full flex justify-center">
+                      <span className="text-base italic text-green-200 text-center drop-shadow-md">{item.title}</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-20">
+                    <h3 className="mt-2 text-3xl font-semibold text-white">{item.title}</h3>
+                    <p className="text-white/80 mt-2 line-clamp-2">{item.description}</p>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
@@ -90,15 +118,6 @@ export const AppleCarousel = ({ items }: { items: Card[] }) => {
 
       {/* Navigation Controls */}
       <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-center gap-12">
-        <button
-          onClick={scrollPrev}
-          className="rounded-full bg-white/10 p-4 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </button>
-
         {/* Navigation Dots */}
         <div className="flex gap-3">
           {items.map((_, index) => (
@@ -110,21 +129,13 @@ export const AppleCarousel = ({ items }: { items: Card[] }) => {
                 }
               }}
               className={cn(
-                "w-3 h-3 rounded-full transition-all",
+                "w-3 h-3 rounded-full transition-all cursor-pointer border-2 border-white",
                 index === activeIndex ? "bg-white w-6" : "bg-white/50"
               )}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
-
-        <button
-          onClick={scrollNext}
-          className="rounded-full bg-white/10 p-4 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
       </div>
     </div>
   );
