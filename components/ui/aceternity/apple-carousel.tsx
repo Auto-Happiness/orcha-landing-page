@@ -95,7 +95,7 @@ export const AppleCarousel = ({ items }: { items: Card[] }) => {
                     </div>
                     {/* Compressed description */}
                     <div className="flex-2 flex items-center justify-center w-full">
-                      <p className="text-lg md:text-xl font-semibold text-white text-center leading-tight drop-shadow-lg max-w-2xl mx-auto">
+                      <p className="text-lg md:text-x2 font-semibold text-white text-center leading-tight drop-shadow-lg max-w-2xl mx-auto">
                         {item.description}
                       </p>
                     </div>

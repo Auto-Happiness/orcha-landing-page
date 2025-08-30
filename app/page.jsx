@@ -3,9 +3,6 @@ import { HeroSection } from "@/components/ui/hero-section";
 import { AppleCarousel } from "@/components/ui/aceternity/apple-carousel";
 import Link from "next/link";
 import city from "@/assets/orcas-working.png"
-import Image from "next/image";
-import embBg from "@/assets/emb.jpg";
-import embLogo from "@/assets/emb-logo.png";
 export default function Home() {
 return (
 <main className="bg-gray-900">

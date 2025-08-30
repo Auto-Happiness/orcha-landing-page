@@ -44,83 +44,33 @@ export default function OrchaAiPage() {
       </div>
     </section>
 
-    {/* Case Studies Section */}
-    <section className="py-12 bg-gray-950 px-6">
+    {/* Key Features */}
+    <section className="py-20 bg-gray-900 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-white">
-          Our Clients
-        </h2>
-        <p className="text-lg text-gray-300 mt-2">
-          See how businesses like yours are driving success with us.
-        </p>
-        <AppleCarousel
-          items={[
-            {
-              id: 1,
-              title: "Environmental Data in EIRS",
-              category: "AI Automation",
-              description:
-                "We're creating a smart system that lets EMB staff and the public ask questions about environmental data in Tagalog or English. It gives clear, accurate answers using information from the EIRS, making data more accessible to our community.",
-              image: require('@/assets/emb.jpg').default.src,
-              logo: require('@/assets/emb-logo.png').default.src,
-            },
-            // {
-            //   id: 2,
-            //   title: "Software Development",
-            //   category: "Custom Solutions",
-            //   description:
-            //     "End-to-end software design and development from concept to deployment.",
-            //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YN2m0dPdMlXyX4r74veeLMIHS1gRrIuFMg&s",
-            // },
-            // {
-            //   id: 3,
-            //   title: "Environmental Data in EIRS",
-            //   category: "AI Automation",
-            //   description:
-            //     "We're creating a smart system that lets EMB staff and the public ask questions about environmental data in Tagalog or English. It gives clear, accurate answers using information from the EIRS, making data more accessible to our community.",
-            //   image: embBg.src,
-            //   logo: embLogo.src,
-            // },
-            // {
-            //   id: 4,
-            //   title: "Software Development",
-            //   category: "Custom Solutions",
-            //   description:
-            //     "End-to-end software design and development from concept to deployment.",
-            //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YN2m0dPdMlXyX4r74veeLMIHS1gRrIuFMg&s",
-            // },
-          ]}
-        />
+        <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">Why Choose Orcha AI?</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-4 text-white">Drag & Drop Builder</h3>
+              <p className="text-green-100">
+                  Design AI workflows visually with an intuitive interface no complex coding required.
+              </p>
+              </div>
+
+          <div className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-4 text-white">LangChain & LangGraph</h3>
+              <p className="text-orange-100">
+                  Leverage the power of leading AI frameworks to build intelligent, connected agents.
+              </p>
+              </div>
+          <div className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-4 text-white">One-Click Deployment</h3>
+              <p className="text-blue-100">
+                  Push your AI workflows live instantly to cloud or on-premise environments.
+              </p>
+              </div>
+        </div>
       </div>
     </section>
-
-      {/* Key Features */}
-      <section className="py-20 bg-gray-900 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">Why Choose Orcha AI?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4 text-white">Drag & Drop Builder</h3>
-                <p className="text-green-100">
-                    Design AI workflows visually with an intuitive interface no complex coding required.
-                </p>
-                </div>
-
-           <div className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4 text-white">LangChain & LangGraph</h3>
-                <p className="text-orange-100">
-                    Leverage the power of leading AI frameworks to build intelligent, connected agents.
-                </p>
-                </div>
-           <div className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4 text-white">One-Click Deployment</h3>
-                <p className="text-blue-100">
-                    Push your AI workflows live instantly to cloud or on-premise environments.
-                </p>
-                </div>
-          </div>
-        </div>
-      </section>
 
       {/* How It Works */}
       <section className="py-20 bg-black px-6">
@@ -207,6 +157,57 @@ export default function OrchaAiPage() {
           </div>
         </div>
       )}
+      
+
+    {/* Case Studies Section */}
+    <section className="py-12 bg-gray-950 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-white">
+          Our Clients
+        </h2>
+        <p className="text-lg text-gray-300 mt-2">
+          See how businesses like yours are driving success with us.
+        </p>
+        <AppleCarousel
+          items={[
+            {
+              id: 1,
+              title: "Environmental Data in EIRS",
+              category: "AI Automation",
+              description:
+                "We’re creating a smart system that enables EMB staff and authorized personnel to ask questions about environmental data in Tagalog or English. It provides clear, accurate answers using information from the EIRS, helping employees access and understand data more efficiently.",
+              image: require('@/assets/emb.jpg').default.src,
+              logo: require('@/assets/emb-logo.png').default.src,
+            },
+            // {
+            //   id: 2,
+            //   title: "Software Development",
+            //   category: "Custom Solutions",
+            //   description:
+            //     "End-to-end software design and development from concept to deployment.",
+            //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YN2m0dPdMlXyX4r74veeLMIHS1gRrIuFMg&s",
+            // },
+            // {
+            //   id: 3,
+            //   title: "Environmental Data in EIRS",
+            //   category: "AI Automation",
+            //   description:
+            //     "We're creating a smart system that lets EMB staff and the public ask questions about environmental data in Tagalog or English. It gives clear, accurate answers using information from the EIRS, making data more accessible to our community.",
+            //   image: embBg.src,
+            //   logo: embLogo.src,
+            // },
+            // {
+            //   id: 4,
+            //   title: "Software Development",
+            //   category: "Custom Solutions",
+            //   description:
+            //     "End-to-end software design and development from concept to deployment.",
+            //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YN2m0dPdMlXyX4r74veeLMIHS1gRrIuFMg&s",
+            // },
+          ]}
+        />
+      </div>
+    </section>
 
       {/* Call to Action */}
       <section className="py-20 bg-black text-center px-6">
