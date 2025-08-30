@@ -64,31 +64,31 @@ export default function OrchaAiPage() {
               image: require('@/assets/emb.jpg').default.src,
               logo: require('@/assets/emb-logo.png').default.src,
             },
-            {
-              id: 2,
-              title: "Software Development",
-              category: "Custom Solutions",
-              description:
-                "End-to-end software design and development from concept to deployment.",
-              image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YN2m0dPdMlXyX4r74veeLMIHS1gRrIuFMg&s",
-            },
-            {
-              id: 3,
-              title: "Environmental Data in EIRS",
-              category: "AI Automation",
-              description:
-                "We're creating a smart system that lets EMB staff and the public ask questions about environmental data in Tagalog or English. It gives clear, accurate answers using information from the EIRS, making data more accessible to our community.",
-              image: embBg.src,
-              logo: embLogo.src,
-            },
-            {
-              id: 4,
-              title: "Software Development",
-              category: "Custom Solutions",
-              description:
-                "End-to-end software design and development from concept to deployment.",
-              image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YN2m0dPdMlXyX4r74veeLMIHS1gRrIuFMg&s",
-            },
+            // {
+            //   id: 2,
+            //   title: "Software Development",
+            //   category: "Custom Solutions",
+            //   description:
+            //     "End-to-end software design and development from concept to deployment.",
+            //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YN2m0dPdMlXyX4r74veeLMIHS1gRrIuFMg&s",
+            // },
+            // {
+            //   id: 3,
+            //   title: "Environmental Data in EIRS",
+            //   category: "AI Automation",
+            //   description:
+            //     "We're creating a smart system that lets EMB staff and the public ask questions about environmental data in Tagalog or English. It gives clear, accurate answers using information from the EIRS, making data more accessible to our community.",
+            //   image: embBg.src,
+            //   logo: embLogo.src,
+            // },
+            // {
+            //   id: 4,
+            //   title: "Software Development",
+            //   category: "Custom Solutions",
+            //   description:
+            //     "End-to-end software design and development from concept to deployment.",
+            //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YN2m0dPdMlXyX4r74veeLMIHS1gRrIuFMg&s",
+            // },
           ]}
         />
       </div>
