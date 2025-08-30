@@ -1,11 +1,14 @@
 "use client"
 import { useState } from "react";
 import Image from "next/image";
+import embBg from "@/assets/emb.jpg";
+import embLogo from "@/assets/emb-logo.png";
 
 import ollamademo from "@/assets/ollamademo.png";
 import openaidemo from "@/assets/openai demo.png";
 import bgImage from '@/assets/orcha-bg.png';
 import { PricingDrawer } from "@/components/ui/pricing-drawer";
+import { AppleCarousel } from "@/components/ui/aceternity/apple-carousel";
 
 
 export default function OrchaAiPage() {
@@ -38,6 +41,56 @@ export default function OrchaAiPage() {
         </button> */}
         &nbsp;
         <PricingDrawer/>
+      </div>
+    </section>
+
+    {/* Case Studies Section */}
+    <section className="py-12 bg-gray-950 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-white">
+          Client Success Journeys
+        </h2>
+        <p className="text-lg text-gray-300 mt-2">
+          See how businesses like yours are driving success with us.
+        </p>
+        <AppleCarousel
+          items={[
+            {
+              id: 1,
+              title: "Environmental Data in EIRS",
+              category: "AI Automation",
+              description:
+                "We're creating a smart system that lets EMB staff and the public ask questions about environmental data in Tagalog or English. It gives clear, accurate answers using information from the EIRS, making data more accessible to our community.",
+              image: require('@/assets/emb.jpg').default.src,
+              logo: require('@/assets/emb-logo.png').default.src,
+            },
+            {
+              id: 2,
+              title: "Software Development",
+              category: "Custom Solutions",
+              description:
+                "End-to-end software design and development from concept to deployment.",
+              image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YN2m0dPdMlXyX4r74veeLMIHS1gRrIuFMg&s",
+            },
+            {
+              id: 3,
+              title: "Environmental Data in EIRS",
+              category: "AI Automation",
+              description:
+                "We're creating a smart system that lets EMB staff and the public ask questions about environmental data in Tagalog or English. It gives clear, accurate answers using information from the EIRS, making data more accessible to our community.",
+              image: embBg.src,
+              logo: embLogo.src,
+            },
+            {
+              id: 4,
+              title: "Software Development",
+              category: "Custom Solutions",
+              description:
+                "End-to-end software design and development from concept to deployment.",
+              image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YN2m0dPdMlXyX4r74veeLMIHS1gRrIuFMg&s",
+            },
+          ]}
+        />
       </div>
     </section>
 
