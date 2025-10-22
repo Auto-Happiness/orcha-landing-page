@@ -378,7 +378,7 @@ export function Header() {
           </div>
           <div className="flex items-center">
             <Link
-              href="/coming-soon" // "/login"
+              href="https://orcha-ai.com/login" // "/login"
               className="text-sm font-medium text-white/70 hover:text-white transition-colors px-4 py-2 rounded-full hover:bg-zinc-800"
             >
               Login
