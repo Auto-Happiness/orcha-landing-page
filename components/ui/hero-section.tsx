@@ -48,13 +48,34 @@ export function HeroSection() {
             integrations that drive innovation.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-6 pt-4">
-            <Button className="px-10 py-6 text-lg bg-purple-600 hover:bg-purple-700 shadow-xl shadow-purple-600/40">
+          <div className="flex flex-wrap justify-center gap-6 pt-6">
+            <Button
+              className="
+                px-12 py-6 text-lg font-semibold
+                bg-gradient-to-r from-purple-600 to-pink-500
+                text-white
+                shadow-xl shadow-purple-600/40
+                transition-all duration-300
+                hover:shadow-purple-500/60
+                hover:scale-[1.03]
+                active:scale-95
+              "
+            >
               Get Started
             </Button>
             <Button
-              variant="outline"
-              className="px-10 py-6 text-lg border-white/30 text-white hover:bg-white/10"
+              className="
+                px-12 py-6 text-lg font-medium
+                bg-transparent
+                border border-white/30
+                text-white
+                backdrop-blur-sm
+                transition-all duration-300
+                hover:border-purple-400/70
+                hover:bg-purple-500/10
+                hover:shadow-lg hover:shadow-purple-500/30
+                active:scale-95
+              "
             >
               Learn More
             </Button>
@@ -63,7 +84,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll hint */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-300 text-sm">
         ↓ Scroll
       </div>
