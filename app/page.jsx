@@ -116,7 +116,7 @@ return (
             Have a project in mind? Let’s talk - our team is ready to bring your vision to life with Orcha's expertise.
          </p>
          <a
-            href="/coming-soon" // contacts
+            href="/contacts" // contacts
             className="inline-block px-8 py-3 bg-gray-800 rounded-lg text-white font-medium border border-gray-700 hover:bg-gray-700 transition"
             >
          Get in Touch
