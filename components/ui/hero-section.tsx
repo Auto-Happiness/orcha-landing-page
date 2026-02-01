@@ -4,48 +4,69 @@ import React from "react";
 import { Button } from "./button";
 import { ContainerTextFlip } from "./aceternity/container-text-flip";
 
-
 export function HeroSection() {
   return (
-    <div className="bg-[#1C1E26] pt-48 pb-32 px-4"> {/* Added pb-32 for bottom space */}
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative min-h-screen w-full overflow-hidden bg-black">
 
-          {/* Left Column - Text Content */}
-          <div className="space-y-8">
-            <h1 className="text-5xl md:text-6xl font-bold text-white">
-              We Orcha-strate your{" "}
+      <video
+        src="/assets/orcha 2.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
+
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-purple-600/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 -right-40 w-[600px] h-[600px] bg-indigo-600/30 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-6 text-center">
+        <div className="max-w-4xl space-y-10">
+
+          <h1 className="text-6xl md:text-7xl xl:text-8xl font-extrabold tracking-tight leading-[1.05] text-white">
+            We{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+              Orcha-strate
+            </span>{" "}
+            your
+            <span className="block mt-4">
               <ContainerTextFlip
-                words={["Systems", "Solutions", "Infra", "AI"]}
+                words={["Systems", "Solutions", "Infrastructure", "AI"]}
                 interval={3000}
-                className="ml-2"
+                className="text-purple-400"
               />
-            </h1>
+            </span>
+          </h1>
 
-            <p className="text-lg text-gray-400 max-w-xl">
-              Orcha Solutions designs and develops tailored software solutions that power
-              and optimize IT systems. From enterprise applications to advanced integrations,
-              we help businesses streamline operations, enhance efficiency, and drive innovation.
-            </p>
+          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            Orcha Solutions designs and builds tailored software that powers and
+            optimizes IT systems — from enterprise platforms to advanced
+            integrations that drive innovation.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-6 pt-4">
+            <Button className="px-10 py-6 text-lg bg-purple-600 hover:bg-purple-700 shadow-xl shadow-purple-600/40">
+              Get Started
+            </Button>
+            <Button
+              variant="outline"
+              className="px-10 py-6 text-lg border-white/30 text-white hover:bg-white/10"
+            >
+              Learn More
+            </Button>
           </div>
-
-
-
-          <div className="relative aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg overflow-hidden h-full 
-                          shadow-[0_-5px_30px_rgba(0,0,0,0.5)] transition-transform duration-300 hover:scale-105">
-            <video
-              src="/assets/orcha 2.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            />
-          </div>
-
 
         </div>
       </div>
-    </div>
+
+      {/* Scroll hint */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-300 text-sm">
+        ↓ Scroll
+      </div>
+    </section>
   );
 }
