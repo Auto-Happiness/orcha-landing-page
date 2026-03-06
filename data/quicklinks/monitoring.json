@@ -1,0 +1,6 @@
+[
+  { "title": "Quick Start", "href": "#dashboard" },
+  { "title": "Metrics", "href": "#metrics" },
+  { "title": "Alerts", "href": "#alerts" },
+  { "title": "Troubleshooting", "href": "#troubleshooting" }
+]

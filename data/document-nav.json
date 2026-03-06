@@ -4,8 +4,42 @@
     "href": "/docs/intro"
   },
   {
+    "title": "Using Orcha",
+    "href": "/docs/using-orcha",
+    "children": [
+      { "title": "Agent Orcha-strate", "href": "/docs/using-orcha/agent-orcha-strate" },
+      { "title": "Prediction", "href": "/docs/using-orcha/prediction" },
+      { "title": "Streaming", "href": "/docs/using-orcha/streaming" },
+      { "title": "Document Store", "href": "/docs/using-orcha/document-store" },
+      { "title": "Upsertion", "href": "/docs/using-orcha/upsertion" },
+      { "title": "Monitoring", "href": "/docs/using-orcha/monitoring" },
+      { "title": "Embed", "href": "/docs/using-orcha/embed" },
+      { "title": "Uploads", "href": "/docs/using-orcha/uploads" }
+    ]
+  },
+  {
     "title": "Get Started",
     "href": "/documentation/getting-started"
+  },
+  {
+    "title": "API Reference",
+    "href": "/docs/api-reference",
+    "children": [
+      { "title": "Overview", "href": "/docs/api-reference" },
+      { "title": "Assistants", "href": "/docs/api-reference/assistants" },
+      { "title": "Attachments", "href": "/docs/api-reference/attachments" },
+      { "title": "Chat Message", "href": "/docs/api-reference/chat-message" },
+      { "title": "Chatflows", "href": "/docs/api-reference/chatflows" },
+      { "title": "Document Store", "href": "/docs/api-reference/document-store" },
+      { "title": "Feedback", "href": "/docs/api-reference/feedback" },
+      { "title": "Leads", "href": "/docs/api-reference/leads" },
+      { "title": "Ping", "href": "/docs/api-reference/ping" },
+      { "title": "Prediction", "href": "/docs/api-reference/prediction" },
+      { "title": "Tools", "href": "/docs/api-reference/tools" },
+      { "title": "Upsert History", "href": "/docs/api-reference/upsert-history" },
+      { "title": "Variables", "href": "/docs/api-reference/variables" },
+      { "title": "Vector Upsert", "href": "/docs/api-reference/vector-upsert" }
+    ]
   },
   {
     "title": "API",

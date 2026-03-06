@@ -1,0 +1,6 @@
+[
+  { "title": "Create Tool", "href": "#create" },
+  { "title": "Get Tools", "href": "#get" },
+  { "title": "Update Tool", "href": "#update" },
+  { "title": "Delete Tool", "href": "#delete" }
+]
