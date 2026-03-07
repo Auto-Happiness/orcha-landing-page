@@ -72,7 +72,7 @@ By blending technical expertise with a deep understanding of business challenges
         <p className="text-lg text-gray-100 mb-8">
           Ready to build something remarkable? Let’s explore how Orcha can help bring your vision to life.
         </p>
-        <a href="/coming-soon" className="px-8 py-3 bg-white text-purple-700 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition">
+        <a href="/contacts" className="px-8 py-3 bg-white text-purple-700 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition">
           Get in Touch
         </a>
       </section>
