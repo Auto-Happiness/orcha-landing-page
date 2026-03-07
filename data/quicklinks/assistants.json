@@ -1,0 +1,6 @@
+[
+  { "title": "Create Assistant", "href": "#create" },
+  { "title": "Get Assistant", "href": "#get" },
+  { "title": "Update Assistant", "href": "#update" },
+  { "title": "Delete Assistant", "href": "#delete" }
+]

@@ -1,0 +1,6 @@
+[
+  { "title": "Create Variable", "href": "#create" },
+  { "title": "Get Variables", "href": "#get" },
+  { "title": "Update Variable", "href": "#update" },
+  { "title": "Delete Variable", "href": "#delete" }
+]
