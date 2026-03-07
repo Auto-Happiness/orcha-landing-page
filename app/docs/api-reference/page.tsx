@@ -4,15 +4,14 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Bot, 
-  Paperclip, 
-  MessageSquare, 
-  Workflow, 
-  Database, 
-  ThumbsUp, 
-  Users, 
-  Activity, 
+import {
+  Bot,
+  Paperclip,
+  MessageSquare,
+  Database,
+  ThumbsUp,
+  Users,
+  Activity,
   Send,
   Wrench,
   History,
@@ -53,10 +52,10 @@ const apiEndpoints = [
     color: "from-emerald-500 to-green-600",
   },
   {
-    icon: Workflow,
-    title: "Chatflows",
-    href: "/docs/api-reference/chatflows",
-    description: "Manage chatflow configurations. Create, update, and deploy conversation flows with conditional logic.",
+    icon: Bot,
+    title: "Chatbots",
+    href: "/docs/api-reference/chatbots",
+    description: "Manage chatbot configurations. Create, update, and deploy AI chatbots with advanced conversation logic.",
     methods: ["GET", "POST", "PUT", "DELETE"],
     color: "from-orange-500 to-amber-600",
   },
@@ -155,24 +154,24 @@ export default function ApiReferencePage() {
           <div className="relative mb-16">
             <div className="absolute -top-20 -left-20 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
             <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl" />
-            
+
             <div className="relative">
               <Badge variant="secondary" className="mb-4 bg-blue-500/10 text-blue-300 border-blue-500/20">
                 <Code2 className="h-3.5 w-3.5 mr-1.5" />
                 REST API v2
               </Badge>
-              
+
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
                   API Reference
                 </span>
               </h1>
-              
+
               <p className="text-xl text-gray-400 max-w-2xl mb-8 leading-relaxed">
-                Complete REST API documentation for integrating with Orcha. Build custom applications, 
+                Complete REST API documentation for integrating with Orcha. Build custom applications,
                 automate workflows, and extend your AI capabilities programmatically.
               </p>
-              
+
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6">
                   Get API Key
@@ -225,7 +224,7 @@ export default function ApiReferencePage() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-2">API Endpoints</h2>
             <p className="text-gray-400 mb-8">13 endpoints to power your AI applications</p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {apiEndpoints.map((endpoint) => (
                 <Link key={endpoint.title} href={endpoint.href} className="block group">
@@ -244,9 +243,9 @@ export default function ApiReferencePage() {
                       </p>
                       <div className="flex flex-wrap gap-1.5">
                         {endpoint.methods.map((method) => (
-                          <Badge 
+                          <Badge
                             key={method}
-                            variant="outline" 
+                            variant="outline"
                             className={`text-xs ${getMethodColor(method)}`}
                           >
                             {method}
@@ -291,9 +290,9 @@ export default function ApiReferencePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {["Python", "JavaScript", ".NET", "Go"].map((sdk) => (
-                <Badge 
+                <Badge
                   key={sdk}
-                  variant="outline" 
+                  variant="outline"
                   className="border-gray-700 text-gray-300 px-4 py-2 text-sm"
                 >
                   {sdk}

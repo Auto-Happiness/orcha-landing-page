@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Create Chatbot",
+        "href": "#create"
+    },
+    {
+        "title": "Get Chatbot",
+        "href": "#get"
+    },
+    {
+        "title": "Update Chatbot",
+        "href": "#update"
+    },
+    {
+        "title": "Delete Chatbot",
+        "href": "#delete"
+    }
+]
