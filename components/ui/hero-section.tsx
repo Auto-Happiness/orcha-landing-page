@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Button } from "./button";
 import { ContainerTextFlip } from "./aceternity/container-text-flip";
 
@@ -49,20 +50,22 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 pt-6">
-            <Button
-              className="
-                px-12 py-6 text-lg font-semibold
-                bg-gradient-to-r from-purple-600 to-pink-500
-                text-white
-                shadow-xl shadow-purple-600/40
-                transition-all duration-300
-                hover:shadow-purple-500/60
-                hover:scale-[1.03]
-                active:scale-95
-              "
-            >
-              Get Started
-            </Button>
+            <Link href="/chat">
+              <Button
+                className="
+                  px-12 py-6 text-lg font-semibold
+                  bg-gradient-to-r from-purple-600 to-pink-500
+                  text-white
+                  shadow-xl shadow-purple-600/40
+                  transition-all duration-300
+                  hover:shadow-purple-500/60
+                  hover:scale-[1.03]
+                  active:scale-95
+                "
+              >
+                Get Started
+              </Button>
+            </Link>
             <Button
               className="
                 px-12 py-6 text-lg font-medium

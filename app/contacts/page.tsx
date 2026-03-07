@@ -11,7 +11,7 @@ const Contacts = () => {
       </div>
 
       <section className="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-24">
-        
+
         <header className="mb-12 text-center">
           <h1 className="text-5xl font-extrabold tracking-tight text-white mb-4">
             Contact Us

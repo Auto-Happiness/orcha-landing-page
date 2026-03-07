@@ -82,7 +82,7 @@ const socialLinks = [
   },
   {
     name: "GitHub",
-    href: "https://github.com/orcha",
+    href: "https://github.com/Orcha-Solutions",
     icon: (props: React.SVGProps<SVGSVGElement>) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
