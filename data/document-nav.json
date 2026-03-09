@@ -7,62 +7,19 @@
     "title": "API Reference",
     "href": "/docs/api-reference",
     "children": [
-      {
-        "title": "Overview",
-        "href": "/docs/api-reference"
-      },
-      {
-        "title": "Assistants",
-        "href": "/docs/api-reference/assistants"
-      },
-      {
-        "title": "Attachments",
-        "href": "/docs/api-reference/attachments"
-      },
-      {
-        "title": "Chat Message",
-        "href": "/docs/api-reference/chat-message"
-      },
-      {
-        "title": "Chatbots",
-        "href": "/docs/api-reference/chatbots"
-      },
-      {
-        "title": "Document Store",
-        "href": "/docs/api-reference/document-store"
-      },
-      {
-        "title": "Feedback",
-        "href": "/docs/api-reference/feedback"
-      },
-      {
-        "title": "Leads",
-        "href": "/docs/api-reference/leads"
-      },
-      {
-        "title": "Ping",
-        "href": "/docs/api-reference/ping"
-      },
-      {
-        "title": "Prediction",
-        "href": "/docs/api-reference/prediction"
-      },
-      {
-        "title": "Tools",
-        "href": "/docs/api-reference/tools"
-      },
-      {
-        "title": "Upsert History",
-        "href": "/docs/api-reference/upsert-history"
-      },
-      {
-        "title": "Variables",
-        "href": "/docs/api-reference/variables"
-      },
-      {
-        "title": "Vector Upsert",
-        "href": "/docs/api-reference/vector-upsert"
-      }
+      { "title": "Assistants", "href": "/docs/api-reference/assistants" },
+      { "title": "Attachments", "href": "/docs/api-reference/attachments" },
+      { "title": "Chat Message", "href": "/docs/api-reference/chat-message" },
+      { "title": "Chatflows", "href": "/docs/api-reference/chatflows" },
+      { "title": "Document Store", "href": "/docs/api-reference/document-store" },
+      { "title": "Feedback", "href": "/docs/api-reference/feedback" },
+      { "title": "Leads", "href": "/docs/api-reference/leads" },
+      { "title": "Ping", "href": "/docs/api-reference/ping" },
+      { "title": "Prediction", "href": "/docs/api-reference/prediction" },
+      { "title": "Tools", "href": "/docs/api-reference/tools" },
+      { "title": "Upsert History", "href": "/docs/api-reference/upsert-history" },
+      { "title": "Variables", "href": "/docs/api-reference/variables" },
+      { "title": "Vector Upsert", "href": "/docs/api-reference/vector-upsert" }
     ]
   },
   {

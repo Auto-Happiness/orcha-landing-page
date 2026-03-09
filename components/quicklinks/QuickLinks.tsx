@@ -22,7 +22,7 @@ const QuickLinksPanel: React.FC<QuickLinksPanelProps> = ({ links }) => {
         <div className="mb-6">
           <h2 className="text-sm font-semibold mb-3 text-gray-400 uppercase tracking-wider flex items-center gap-2">
             <Hash className="h-4 w-4" />
-            On this page
+            Contents
           </h2>
           <ul className="space-y-1 border-l-2 border-gray-800 ml-1.5">
             {links.map((link, idx) => (
