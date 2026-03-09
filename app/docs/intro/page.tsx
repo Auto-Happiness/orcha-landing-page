@@ -85,7 +85,7 @@ export default function IntroPage() {
                 Create LLM-powered applications, chatbots, and agent teams without writing code.
               </p>
               
-              <div className="flex flex-wrap gap-4">
+              {/* <div className="flex flex-wrap gap-4">
                 <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6">
                   Get Started
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -93,7 +93,7 @@ export default function IntroPage() {
                 <Button variant="outline" className="border-gray-700 hover:bg-gray-800">
                   View on GitHub
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
 
