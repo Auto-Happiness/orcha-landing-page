@@ -87,9 +87,9 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-300 text-sm">
+      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-300 text-sm">
         ↓ Scroll
-      </div>
+      </div> */}
     </section>
   );
 }

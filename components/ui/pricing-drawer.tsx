@@ -18,7 +18,7 @@ const tiers = [
   {
     name: "Basic",
     id: "tier-basic",
-    price: "$27",
+    price: "₱1,599.00",
     description: "Perfect for trying out our platform.",
     features: [
       "10k Communications",
@@ -28,7 +28,7 @@ const tiers = [
   {
     name: "Pro",
     id: "tier-pro",
-    price: "$89",
+    price: "₱5,299.00",
     description: "For businesses requiring better limits, additional integration, features, and premium support.",
     features: [
       "50k Communications",
