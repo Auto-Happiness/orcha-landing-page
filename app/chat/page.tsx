@@ -112,6 +112,7 @@ export default function ChatPage() {
           display: flex; flex-direction: column; height: 100dvh;
           background: #08080f; color: #e5e7eb; overflow: hidden;
           font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+          padding-top: 64px;
         }
 
         /* ── NAV ── */
