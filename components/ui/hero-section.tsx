@@ -66,7 +66,7 @@ export function HeroSection() {
                 Get Started
               </Button>
             </Link>
-            <Button
+            {/* <Button
               className="
                 px-12 py-6 text-lg font-medium
                 bg-transparent
@@ -81,7 +81,7 @@ export function HeroSection() {
               "
             >
               Learn More
-            </Button>
+            </Button> */}
           </div>
 
         </div>
