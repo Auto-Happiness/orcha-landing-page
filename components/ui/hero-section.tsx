@@ -44,9 +44,10 @@ export function HeroSection() {
           </h1>
 
           <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            Orcha Solutions designs and builds tailored software that powers and
-            optimizes IT systems — from enterprise platforms to advanced
-            integrations that drive innovation.
+            Orcha Solutions leverages the latest technology stacks to engineer
+            high-performance software that powers and modernizes IT systems —
+            from high-scale enterprise platforms to advanced integrations
+            built for the future.
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 pt-6">

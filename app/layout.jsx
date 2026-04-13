@@ -3,6 +3,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/ui/header"
 import { Footer } from "@/components/ui/footer"
+import { CookieConsent } from "@/components/ui/cookie-consent"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
             {children}
           </div>
           <Footer />
+          <CookieConsent />
         </ThemeProvider>
       </body>
     </html>

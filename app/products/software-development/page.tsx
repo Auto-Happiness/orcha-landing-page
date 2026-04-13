@@ -225,7 +225,7 @@ export default function SoftwareDevelopmentPage() {
             From concept to deployment, we deliver solutions that perform, engage, and grow with your needs.
           </p>
           <a
-            href="/contact"
+            href="/contacts"
             className="inline-block animate-pulse-ring px-8 py-3 bg-gradient-to-r from-purple-500 to-purple-700 rounded-lg shadow-lg font-semibold hover:opacity-90 hover:scale-105 transition-transform duration-200"
           >
             Start Your Project →
@@ -317,7 +317,7 @@ export default function SoftwareDevelopmentPage() {
             Partner with us to create high-performance, secure, and scalable software solutions.
           </p>
           <a
-            href="/contact"
+            href="/contacts"
             className="inline-block px-10 py-4 bg-white text-purple-700 font-semibold rounded-xl shadow-xl hover:bg-gray-100 hover:scale-105 transition-all duration-200"
           >
             Start Your Project Today →
