@@ -30,6 +30,12 @@ const products = [
       "We design and build modern, scalable, and secure applications tailored to your business goals",
     icon: "", //Bot
   },
+  {
+    title: "Orcha Agent OS",
+    href: "/products/orcha-agent-os",
+    description: "The Semantic Operating System for Multi-Tenant AI Agents",
+    icon: "", 
+  },
   // {
   //   title: "SAP Development",
   //   href: "/products/sap",
@@ -235,12 +241,12 @@ export function Header() {
             </Link>
           </div>
           <div className="flex-1 flex justify-center">
-            <NavigationMenu>
+            <NavigationMenu className="dark">
               <NavigationMenuList className="gap-2">
                 <NavigationMenuItem>
                   <Link
                     href="/"
-                    className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1"
+                    className="text-sm font-medium text-white/70 hover:text-white focus:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1"
                   >
                     Home
                   </Link>
@@ -249,13 +255,13 @@ export function Header() {
                 <NavigationMenuItem>
                   <Link
                     href="/docs/intro"
-                    className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1">
+                    className="text-sm font-medium text-white/70 hover:text-white focus:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1">
                     Docs
                   </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1">
+                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white focus:text-white data-[state=open]:text-white data-[active]:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1">
                     {/* <LayoutGrid className="h-4 w-4 mr-2" /> */}
                     Products
                   </NavigationMenuTrigger>
@@ -347,7 +353,7 @@ export function Header() {
                 </NavigationMenuItem> */}
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1">
+                  <NavigationMenuTrigger className="text-sm font-medium text-white/70 hover:text-white focus:text-white data-[state=open]:text-white data-[active]:text-white transition-colors bg-transparent border-0 hover:bg-transparent focus:bg-transparent px-2 py-1">
                     {/* <Building2 className="h-4 w-4 mr-2" /> */}
                     Company
                   </NavigationMenuTrigger>
