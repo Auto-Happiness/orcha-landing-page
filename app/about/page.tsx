@@ -61,8 +61,11 @@ export default function AboutPage() {
   const heroRef = useReveal();
   const statsRef = useReveal();
   const missionRef = useReveal();
+  const missionImgRef = useReveal();
   const valuesRef = useReveal();
   const ctaRef = useReveal();
+  const teamTextRef = useReveal();
+  const teamImgRef = useReveal();
 
   return (
     <div className="about-root">
@@ -298,8 +301,8 @@ export default function AboutPage() {
       <section className="story-section">
         <div className="story-grid">
           {/* Image */}
-          <div ref={missionRef} className="rv-l story-img-wrap">
-            <img src="/assets/orcha-web.png" alt="Orcha Solutions" className="story-img" />
+          <div ref={missionImgRef} className="rv-l story-img-wrap">
+            <img src="/assets/orcha-web.png" alt="Orcha Solutions" width={1500} height={1000} className="story-img" />
             <div className="story-img-badge">Est. 2023 🚀</div>
           </div>
 
@@ -378,7 +381,7 @@ export default function AboutPage() {
       {/* ── Team Visual ── */}
       <section className="team-section">
         <div className="team-grid">
-          <div ref={ctaRef} className="rv-r" style={{ animationDelay: "0.1s" }}>
+          <div ref={teamTextRef} className="rv-r" style={{ animationDelay: "0.1s" }}>
             <span className="section-badge">The Team</span>
             <h2 className="section-title">People Who Actually Care About Your Outcome</h2>
             <p className="section-body">
@@ -401,8 +404,8 @@ export default function AboutPage() {
             </Link>
           </div>
 
-          <div ref={ctaRef} className="rv-l">
-            <img src="/assets/orcha-web.png" alt="Orcha platform" className="team-img" />
+          <div ref={teamImgRef} className="rv-l">
+            <img src="/assets/art/conductor.webp" alt="The Orcha conductor orca orchestrating the tech stack" width={1500} height={1000} className="team-img" />
           </div>
         </div>
       </section>

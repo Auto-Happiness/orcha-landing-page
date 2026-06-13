@@ -207,6 +207,13 @@ export default function SoftwareDevelopmentPage() {
         {/* Floating orbs */}
         <div className="absolute top-10 left-10 w-72 h-72 bg-purple-700/20 rounded-full blur-3xl animate-float pointer-events-none" />
         <div className="absolute bottom-10 right-10 w-64 h-64 bg-blue-700/20 rounded-full blur-3xl animate-float pointer-events-none" style={{ animationDelay: "2s" }} />
+        {/* Coding orca, drifting at the edge of the hero */}
+        <img
+          src="/assets/art/dev-card.webp"
+          alt=""
+          aria-hidden="true"
+          className="hidden min-[1700px]:block absolute -right-12 top-1/2 -translate-y-1/2 w-[420px] rounded-2xl border border-purple-500/20 opacity-60 rotate-3 pointer-events-none animate-float"
+        />
 
         <div ref={heroRef} className="reveal relative max-w-4xl mx-auto">
           <span className="inline-block mb-4 px-4 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-purple-500/10 text-purple-300 border border-purple-500/20">

@@ -3,7 +3,7 @@
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { useRef, useState, useEffect, useCallback } from "react";
-import { Send, Square, Sparkles, User, Bot, ArrowRight, Code2, Cpu, Layers } from "lucide-react";
+import { Send, Square, User, ArrowRight, Code2, Cpu, Layers } from "lucide-react";
 import Link from "next/link";
 import type { UIMessage } from "ai";
 
@@ -123,9 +123,9 @@ export default function ChatPage() {
           position: relative; z-index: 10; flex-shrink: 0;
         }
         .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: white; }
-        .nav-icon { width: 34px; height: 34px; border-radius: 10px;
-          background: linear-gradient(135deg,#7c3aed,#4f46e5);
-          display: flex; align-items: center; justify-content: center; }
+        .nav-icon { width: 34px; height: 34px; border-radius: 50%;
+          display: flex; align-items: center; justify-content: center;
+          overflow: hidden; }
         .nav-name { font-size: 16px; font-weight: 700; }
         .nav-tag { font-size: 11px; padding: 2px 8px; border-radius: 999px;
           background: rgba(124,58,237,.15); color: #a78bfa;
@@ -157,9 +157,8 @@ export default function ChatPage() {
         }
         .welcome-icon {
           width: 68px; height: 68px; border-radius: 50%;
-          background: linear-gradient(135deg, #7c3aed, #4f46e5);
           display: flex; align-items: center; justify-content: center;
-          margin-bottom: 24px;
+          margin-bottom: 24px; overflow: hidden;
           animation: pulse-orb 3s ease-in-out infinite;
         }
         .welcome-title {
@@ -316,7 +315,7 @@ export default function ChatPage() {
       <nav className="nav">
         <Link href="/" className="nav-brand">
           <div className="nav-icon">
-            <Bot className="h-4 w-4 text-white" />
+            <img src="/assets/art/orcha-avatar.svg" alt="" style={{ width: "100%", height: "100%" }} />
           </div>
           <span className="nav-name">Orcha Assistant</span>
           <span className="nav-tag">Virtual Sales Agent</span>
@@ -332,7 +331,7 @@ export default function ChatPage() {
         {isEmpty ? (
           <div className="welcome">
             <div className="welcome-icon">
-              <Sparkles className="h-7 w-7 text-white" />
+              <img src="/assets/art/orcha-avatar.svg" alt="" style={{ width: "100%", height: "100%" }} />
             </div>
             <h1 className="welcome-title">How can Orcha help you?</h1>
             <p className="welcome-sub">
@@ -356,7 +355,7 @@ export default function ChatPage() {
                   <div className={`av ${m.role === "user" ? "me" : "bot"}`}>
                     {m.role === "user"
                       ? <User className="h-3.5 w-3.5 text-gray-400" />
-                      : <Sparkles className="h-3.5 w-3.5 text-white" />}
+                      : <img src="/assets/art/orcha-avatar.svg" alt="" style={{ width: "100%", height: "100%" }} />}
                   </div>
                   <div className="body">
                     <div className="who">{m.role === "user" ? "You" : "Orcha Assistant"}</div>
@@ -371,7 +370,7 @@ export default function ChatPage() {
             {/* Typing indicator */}
             {isStreaming && messages[messages.length - 1]?.role === "user" && (
               <div className="row">
-                <div className="av bot"><Sparkles className="h-3.5 w-3.5 text-white" /></div>
+                <div className="av bot"><img src="/assets/art/orcha-avatar.svg" alt="" style={{ width: "100%", height: "100%" }} /></div>
                 <div className="body">
                   <div className="who">Orcha Assistant</div>
                   <div className="dots">

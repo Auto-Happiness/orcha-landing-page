@@ -2,7 +2,7 @@ import React from "react";
 
 const Contacts = () => {
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-[#0E1016] via-[#111827] to-[#0B0D12] text-gray-200">
+    <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0E1016] via-[#111827] to-[#0B0D12] text-gray-200">
 
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
@@ -10,7 +10,7 @@ const Contacts = () => {
         <div className="absolute top-1/2 -right-40 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-3xl" />
       </div>
 
-      <section className="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-24">
+      <section className="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-24">
 
         <header className="mb-12 text-center">
           <h1 className="text-5xl font-extrabold tracking-tight text-white mb-4">
@@ -21,7 +21,7 @@ const Contacts = () => {
           </p>
         </header>
 
-        <div className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl p-8 md:p-12 space-y-8 text-center">
+          <div className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl p-8 md:p-12 space-y-8 text-center">
 
           <h2 className="text-3xl font-bold text-white">
             ORCHA SOLUTIONS

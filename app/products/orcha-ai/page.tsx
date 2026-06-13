@@ -15,21 +15,21 @@ export default function OrchaAiPage() {
     <>
       {/* Hero Section */}
      <section
-      className="py-20 text-white text-center px-6 bg-black bg-cover bg-center relative"
+      className="py-24 text-white text-center px-6 bg-black bg-cover bg-center relative"
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
       {/* Overlay for contrast */}
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-45"></div>
 
-      {/* Content above overlay */}
-      <div className="relative max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      {/* Content above overlay, on a glass scrim so copy stays readable over the art */}
+      <div className="relative max-w-4xl mx-auto bg-black/30 backdrop-blur-sm rounded-3xl py-10 px-8">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">
           Build AI Agents Visually with{' '}
           <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
             Orcha AI
           </span>
         </h1>
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
           Orcha AI empowers you to create, connect, and deploy AI-powered workflows
           without writing a single line of code powered by LangChain and LangGraph.
         </p>
@@ -46,22 +46,22 @@ export default function OrchaAiPage() {
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">Why Choose Orcha AI?</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4 text-white">Drag & Drop Builder</h3>
-              <p className="text-green-100">
+          <div className="bg-gray-800/60 border border-purple-500/25 p-6 rounded-xl backdrop-blur-sm hover:border-purple-400/60 hover:-translate-y-1 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-3 text-white">Drag & Drop Builder</h3>
+              <p className="text-gray-400">
                   Design AI workflows visually with an intuitive interface no complex coding required.
               </p>
               </div>
 
-          <div className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4 text-white">LangChain & LangGraph</h3>
-              <p className="text-orange-100">
+          <div className="bg-gray-800/60 border border-purple-500/25 p-6 rounded-xl backdrop-blur-sm hover:border-purple-400/60 hover:-translate-y-1 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-3 text-white">LangChain & LangGraph</h3>
+              <p className="text-gray-400">
                   Leverage the power of leading AI frameworks to build intelligent, connected agents.
               </p>
               </div>
-          <div className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4 text-white">One-Click Deployment</h3>
-              <p className="text-blue-100">
+          <div className="bg-gray-800/60 border border-purple-500/25 p-6 rounded-xl backdrop-blur-sm hover:border-purple-400/60 hover:-translate-y-1 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-3 text-white">One-Click Deployment</h3>
+              <p className="text-gray-400">
                   Push your AI workflows live instantly to cloud or on-premise environments.
               </p>
               </div>
