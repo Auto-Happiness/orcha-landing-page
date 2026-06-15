@@ -262,6 +262,59 @@ export default function Home() {
       {/* ── Hero — the pod orchestrating, live ── */}
       <HeroSection />
 
+      {/* ── What We Offer ── */}
+      <section className="relative py-28 bg-gray-950 px-6 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-purple-800/10 rounded-full blur-3xl orb-float-slow pointer-events-none" />
+
+        <div className="max-w-6xl mx-auto">
+          <div ref={offerHeadRef} className="rv text-center mb-14">
+            <span className="inline-block mb-3 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-purple-500/10 text-purple-300 border border-purple-500/20">
+              Services
+            </span>
+            <h2 className="text-4xl font-bold text-white">What We Offer</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-7">
+            {OFFERS.map((o, i) => (
+              <div key={o.title} ref={offerRefs[i]} className={`rv-scale d${i + 1}`}>
+                <Link href={o.href} className="block h-full">
+                  <div className="offer-card relative h-full rounded-2xl overflow-hidden shadow-xl group border border-gray-800 bg-gray-900">
+                    <div className="h-48 overflow-hidden">
+                      <img
+                        src={o.img}
+                        alt=""
+                        className="thumb w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-transparent to-gray-900/90 pointer-events-none" />
+                    <div className="p-7 pt-4">
+                      <h3 className="text-2xl font-semibold mb-3 card-title-shimmer">
+                        {o.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm mb-5 leading-relaxed">
+                        {o.text}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {o.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-3 py-1 rounded-full text-[11px] font-mono bg-purple-500/10 text-purple-300 border border-purple-500/25 group-hover:border-purple-400/60 transition-colors duration-200"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="glow-divider" />
+
       {/* ── How we Orcha-strate (mirrors the hero video pipeline) ── */}
       <section className="relative py-28 bg-gray-950 px-6 overflow-hidden">
         {/* rising bubbles */}
@@ -377,59 +430,6 @@ export default function Home() {
             >
               Learn More About Us →
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <div className="glow-divider" />
-
-      {/* ── What We Offer ── */}
-      <section className="relative py-28 bg-gray-950 px-6 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-purple-800/10 rounded-full blur-3xl orb-float-slow pointer-events-none" />
-
-        <div className="max-w-6xl mx-auto">
-          <div ref={offerHeadRef} className="rv text-center mb-14">
-            <span className="inline-block mb-3 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-purple-500/10 text-purple-300 border border-purple-500/20">
-              Services
-            </span>
-            <h2 className="text-4xl font-bold text-white">What We Offer</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-7">
-            {OFFERS.map((o, i) => (
-              <div key={o.title} ref={offerRefs[i]} className={`rv-scale d${i + 1}`}>
-                <Link href={o.href} className="block h-full">
-                  <div className="offer-card relative h-full rounded-2xl overflow-hidden shadow-xl group border border-gray-800 bg-gray-900">
-                    <div className="h-48 overflow-hidden">
-                      <img
-                        src={o.img}
-                        alt=""
-                        className="thumb w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-transparent to-gray-900/90 pointer-events-none" />
-                    <div className="p-7 pt-4">
-                      <h3 className="text-2xl font-semibold mb-3 card-title-shimmer">
-                        {o.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm mb-5 leading-relaxed">
-                        {o.text}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {o.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="px-3 py-1 rounded-full text-[11px] font-mono bg-purple-500/10 text-purple-300 border border-purple-500/25 group-hover:border-purple-400/60 transition-colors duration-200"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
           </div>
         </div>
       </section>
