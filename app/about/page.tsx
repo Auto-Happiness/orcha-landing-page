@@ -38,7 +38,7 @@ const WHY_ITEMS = [
     desc: "Architectures built to scale, evolve, and withstand the test of time as your business grows.",
   },
   {
-    icon: "🔒",
+    icon: "🔒", 
     title: "Security-First Mindset",
     desc: "Enterprise-grade security baked in from day one — not patched on at the end.",
   },
