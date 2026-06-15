@@ -262,26 +262,6 @@ export default function Home() {
       {/* ── Hero — the pod orchestrating, live ── */}
       <HeroSection />
 
-      {/* ── Tech current: the stack drifting by ── */}
-      <section className="relative py-10 bg-gray-900 border-y border-purple-500/10">
-        <p className="text-center text-[11px] font-mono tracking-[0.35em] uppercase text-purple-300/60 mb-6">
-          Technologies in the current
-        </p>
-        <div className="marquee-mask overflow-hidden">
-          <div className="marquee-track">
-            {[...TECHS, ...TECHS].map((t, i) => (
-              <span
-                key={i}
-                aria-hidden={i >= TECHS.length || undefined}
-                className="flex items-center gap-3 px-7 text-gray-400 font-mono text-base whitespace-nowrap"
-              >
-                <span aria-hidden="true" className="text-purple-500/70">⬡</span> {t}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── How we Orcha-strate (mirrors the hero video pipeline) ── */}
       <section className="relative py-28 bg-gray-950 px-6 overflow-hidden">
         {/* rising bubbles */}
