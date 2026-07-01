@@ -3,14 +3,12 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { SiGmail, SiGooglesheets, SiGoogledrive, SiGooglecalendar } from "react-icons/si";
-import bgImage from '@/assets/orcha-bg.png';
-import nextjsIcon from "@/assets/nextjs.png";
-import redisIcon from "@/assets/redis.png";
-import dockerIcon from "@/assets/docker.png";
 import postgresIcon from "@/assets/postgres.png";
 import mssqlIcon from "@/assets/mssql.png";
-import tsIcon from "@/assets/ts.png";
 import { PricingDrawer } from "@/components/ui/pricing-drawer";
+import { ThreeBackground } from "@/components/ui/three-background";
+import { AgentOsDemo } from "@/components/ui/agent-os-demo";
+import { SemanticFlow } from "@/components/ui/semantic-flow";
 
 /* ─── Inline styles / keyframes ───────────────────────── */
 const GlobalStyles = () => (
@@ -150,12 +148,7 @@ function useReveal() {
 
 export default function OrchaAgentOSPage() {
   const heroRef = useReveal();
-  const advantageRef = useReveal();
-  const techRef = useReveal();
-  const ctaRef = useReveal();
   const chatDemoRef = useReveal();
-  const sqlChartsRef = useReveal();
-  const mcpRef = useReveal();
 
   const mcpTools = [
     { name: "Gmail", icon: <SiGmail size={48} color="#EA4335" /> },
@@ -175,7 +168,7 @@ export default function OrchaAgentOSPage() {
 
   return (
     <>
-      <title>Orcha Os Agent</title>
+      <title>Orcha Agent OS | The Ultimate Lightweight Gen BI</title>
       <div className="bg-slate-950 text-white min-h-screen overflow-hidden font-sans">
         <GlobalStyles />
 
@@ -184,8 +177,11 @@ export default function OrchaAgentOSPage() {
           {/* Stripe-like Mesh Gradient Background */}
           <div className="mesh-container">
             <div className="mesh-gradient" />
-            <div className="absolute inset-0 bg-slate-950/40" />
+            <div className="absolute inset-0 bg-slate-950/60" />
           </div>
+
+          {/* Interactive Three.js Background */}
+          <ThreeBackground />
 
           {/* Additional Floating Teal Orbs for Depth */}
           <div className="absolute top-20 left-10 w-96 h-96 bg-teal-500/10 rounded-full blur-[100px] animate-float pointer-events-none z-10" />
@@ -196,15 +192,17 @@ export default function OrchaAgentOSPage() {
               <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
               The Semantic Operating System
             </div>
-            <h1 className="text-6xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tight">
-              Chat with your Data <br />
-              <span className="text-teal-400">with Orcha Agent OS</span>
-            </h1>
+            <h2 className="text-5xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tight">
+              The Ultimate <br />
+              <span className="text-teal-400">Lightweight Genbi</span>
+            </h2>
+            <h1 className="text-6xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tight">ORCHA OS</h1>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
               Orcha Agent OS bridges the gap between complex data warehouses and AI Agents.
               Unlock governed, business-aware intelligence across your entire enterprise <strong>with no hallucinations</strong> and without guessing SQL queries.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <PricingDrawer />
               <a
                 href="https://github.com/Auto-Happiness/orcha-agent-os"
                 target="_blank"
@@ -220,47 +218,6 @@ export default function OrchaAgentOSPage() {
           </div>
         </section>
 
-        {/* ── The Advantage ── */}
-        <section className="py-24 px-6 relative">
-          <div className="max-w-7xl mx-auto">
-            <div ref={advantageRef} className="reveal grid md:grid-cols-5 gap-16 items-center">
-              <div className="md:col-span-2">
-                <h2 className="text-4xl font-bold mb-6">Governed Intelligence <br /> <span className="text-teal-400">by Design.</span></h2>
-                <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                  Most AI solutions fail because they lack business context. Orcha Agent OS creates a standardized semantic layer that translates raw data into business-ready concepts.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Multi-tenant security isolation",
-                    "Automated schema introspection",
-                    "Real-time RAG pipeline orchestration",
-                    "Standardized tool discovery via MCP"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-slate-300">
-                      <div className="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-3.5 h-3.5">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="md:col-span-3 relative">
-                <div className="absolute inset-0 bg-teal-500/10 rounded-3xl blur-2xl animate-float" />
-                <Image
-                  src="/os/os1.png"
-                  alt="Architecture"
-                  width={1600}
-                  height={1000}
-                  className="relative rounded-3xl border border-slate-800 shadow-2xl animate-float"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* ── Experience Semantic Chat ── */}
         <section className="py-24 px-6 relative bg-slate-950/50">
           <div className="max-w-7xl mx-auto">
@@ -272,71 +229,38 @@ export default function OrchaAgentOSPage() {
               </p>
             </div>
 
-            <div className="relative max-w-5xl mx-auto">
+            <div className="relative max-w-6xl mx-auto">
               {/* Decorative background glow */}
               <div className="absolute -inset-4 bg-teal-500/10 rounded-[2.5rem] blur-2xl" />
 
-              <div className="relative rounded-[2rem] overflow-hidden border border-slate-800 shadow-[0_0_50px_-12px_rgba(20,184,166,0.3)] glass-card">
-                <video
-                  src="/os/chat.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto"
-                />
+              <div className="relative">
+                <AgentOsDemo />
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── Automatic SQL Charts ── */}
-        <section className="py-24 px-6 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <div ref={sqlChartsRef} className="reveal grid md:grid-cols-5 gap-16 items-center">
-              <div className="md:col-span-3 order-2 md:order-1 relative">
-                <div className="absolute inset-0 bg-teal-500/10 rounded-3xl blur-2xl animate-float" />
-                <Image
-                  src="/os/os2.png"
-                  alt="Automatic SQL Charts"
-                  width={1600}
-                  height={1000}
-                  className="relative rounded-3xl border border-slate-800 shadow-2xl animate-float"
-                />
-              </div>
-              <div className="md:col-span-2 order-1 md:order-2">
-                <h2 className="text-4xl font-bold mb-6">Automatic <br /> <span className="text-teal-400">SQL Charts.</span></h2>
-                <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                  Transform complex query results into stunning visual intelligence automatically.
-                  Orcha Agent OS identifies the best visualization for your data, from trend lines to distribution maps.
-                </p>
-                <div className="space-y-6">
-                  {[
-                    { title: "Dynamic Visualization", desc: "Auto-selects charts based on data structure." },
-                    { title: "Real-time Updates", desc: "Charts refresh as your underlying data changes." },
-                    { title: "Interactive Exploration", desc: "Drill down into specific data points with ease." }
-                  ].map((item, i) => (
-                    <div key={i} className="flex gap-4">
-                      <div className="w-10 h-10 shrink-0 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-400">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-slate-200">{item.title}</h4>
-                        <p className="text-sm text-slate-500">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+        {/* ── Semantic Layer Lifecycle Flow ── */}
+        <section className="py-24 px-6 relative overflow-hidden bg-slate-900/10">
+          <div className="max-w-7xl mx-auto animate-fade-slide-up">
+            <div className="text-center mb-16 space-y-4">
+              <h2 className="text-4xl font-bold tracking-tight">
+                The Semantic Layer <span className="text-teal-400">Lifecycle.</span>
+              </h2>
+              <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                See how Orcha Agent OS introspects, models, embeds, validates, and runs secure database queries in real-time.
+              </p>
+            </div>
+
+            <div className="relative">
+              <SemanticFlow />
             </div>
           </div>
         </section>
 
         {/* ── MCP Tool Ecosystem ── */}
         <section className="py-24 px-6 bg-slate-900/50 overflow-hidden">
-          <div ref={mcpRef} className="reveal max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto animate-fade-slide-up">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Unified MCP Tool Ecosystem</h2>
               <p className="text-slate-400 max-w-2xl mx-auto">
@@ -371,7 +295,7 @@ export default function OrchaAgentOSPage() {
               <p className="text-slate-400">Orcha Agent OS seamlessly connects with your existing enterprise data infrastructure.</p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-center">
               <div className="flex flex-col items-center gap-4 glass-card p-6 rounded-2xl grayscale hover:grayscale-0 transition-all duration-300">
                 <Image src={mssqlIcon} alt="MSSQL" width={64} height={64} className="object-contain h-12" />
                 <span className="text-sm font-semibold text-slate-300">Microsoft SQL Server</span>
@@ -386,6 +310,30 @@ export default function OrchaAgentOSPage() {
               <div className="flex flex-col items-center gap-4 glass-card p-6 rounded-2xl grayscale hover:grayscale-0 transition-all duration-300">
                 <Image src={postgresIcon} alt="Postgres" width={64} height={64} className="object-contain h-12" />
                 <span className="text-sm font-semibold text-slate-300">PostgreSQL</span>
+              </div>
+              <div className="flex flex-col items-center gap-4 glass-card p-6 rounded-2xl grayscale hover:grayscale-0 transition-all duration-300">
+                <svg viewBox="0 0 24 24" className="w-12 h-12 text-slate-300 hover:text-slate-200 transition-colors" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                  <path d="M3 12A9 3 0 0 0 21 12"></path>
+                  <path d="M7 15c1 0 1.5-.5 2.5-.5s1.5.5 2.5.5 1.5-.5 2.5-.5 1.5.5 2.5.5" stroke="#003545"></path>
+                </svg>
+                <span className="text-sm font-semibold text-slate-300">MariaDB</span>
+              </div>
+              <div className="flex flex-col items-center gap-4 glass-card p-6 rounded-2xl grayscale hover:grayscale-0 transition-all duration-300">
+                <svg viewBox="0 0 24 24" className="w-12 h-12 text-slate-300 hover:text-slate-200 transition-colors" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                  <line x1="6" y1="16" x2="18" y2="8" strokeWidth="2.5" stroke="currentColor" />
+                </svg>
+                <span className="text-sm font-semibold text-slate-300">SQLite</span>
+              </div>
+              <div className="flex flex-col items-center gap-4 glass-card p-6 rounded-2xl grayscale hover:grayscale-0 transition-all duration-300">
+                <svg viewBox="0 0 24 24" className="w-12 h-12 fill-slate-300 hover:fill-[#ea1c24] transition-colors" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                </svg>
+                <span className="text-sm font-semibold text-slate-300">Oracle Database</span>
               </div>
               <div className="flex flex-col items-center gap-4 glass-card p-6 rounded-2xl border-dashed border-teal-500/30">
                 <div className="w-12 h-12 rounded-full bg-teal-500/10 flex items-center justify-center text-teal-400 animate-pulse">
@@ -403,12 +351,26 @@ export default function OrchaAgentOSPage() {
 
         {/* ── CTA ── */}
         <section className="py-32 px-6">
-          <div ref={ctaRef} className="reveal max-w-4xl mx-auto glass-card p-12 md:p-20 text-center rounded-[3rem] border-teal-500/20 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto glass-card p-12 md:p-20 text-center rounded-[3rem] border-teal-500/20 relative overflow-hidden animate-fade-slide-up">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500/0 via-teal-500 to-teal-500/0" />
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Modernize Your Data <br /> Intelligence.</h2>
             <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
               Ready to bridge the gap between your data warehouse and the future of agentic AI?
             </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <PricingDrawer />
+              <a
+                href="https://github.com/Auto-Happiness/orcha-agent-os"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 bg-slate-800 rounded-xl font-semibold border border-slate-700 hover:bg-slate-700 transition flex items-center gap-2"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+                View on GitHub
+              </a>
+            </div>
           </div>
         </section>
 
