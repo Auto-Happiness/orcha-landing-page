@@ -287,21 +287,7 @@ export function SemanticFlow() {
               {steps[activeStep].description}
             </p>
 
-            {/* Files associated */}
-            <div className="space-y-1.5 pt-2">
-              <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Associated Modules:</h4>
-              <div className="flex flex-wrap gap-2">
-                {steps[activeStep].files.map((file) => (
-                  <span 
-                    key={file} 
-                    className="px-2.5 py-1 bg-slate-900 border border-slate-800 hover:border-slate-700/80 text-[10px] font-mono font-bold text-slate-300 rounded-lg flex items-center gap-1.5 shadow-sm transition-all"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-teal-400" />
-                    {file}
-                  </span>
-                ))}
-              </div>
-            </div>
+
 
           </div>
 
