@@ -1210,7 +1210,7 @@ export function AgentOsDemo() {
                               { label: "Grade 9", height: "31.25%", color: "bg-[#ff6b6b]" },
                               { label: "Unknown", height: "9.38%", color: "bg-[#8b35e2]" }
                             ].map((bar, idx) => (
-                              <div key={idx} className="flex flex-col items-center gap-2 w-10">
+                              <div key={idx} className="flex flex-col items-center justify-end gap-2 w-10 h-full">
                                 {/* The Bar */}
                                 <div 
                                   style={{ height: bar.height }} 
