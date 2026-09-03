@@ -1,0 +1,7 @@
+[
+  { "title": "Overview", "href": "#overview" },
+  { "title": "Prerequisites", "href": "#prerequisites" },
+  { "title": "Compiling with wasm-pack", "href": "#compiling" },
+  { "title": "Deploying the Binary", "href": "#deploying" },
+  { "title": "Windows Toolchain Fixes", "href": "#windows-fixes" }
+]

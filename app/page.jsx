@@ -209,13 +209,6 @@ const STAGES = [
 
 const OFFERS = [
   {
-    title: "Orcha AI",
-    href: "/products/orcha-ai",
-    img: "/assets/art/ai-card.webp",
-    text: "Build LLM-powered workflows without writing a single line of code — automation and smarter decisions out of the box.",
-    tags: ["LangChain", "No-code", "Automation"],
-  },
-  {
     title: "Software Development",
     href: "/products/software-development",
     img: "/assets/art/dev-card.webp",
@@ -248,7 +241,7 @@ export default function Home() {
   const aboutImgRef = useReveal();
   const aboutTextRef = useReveal();
   const offerHeadRef = useReveal();
-  const offerRefs = [useReveal(), useReveal(), useReveal()];
+  const offerRefs = [useReveal(), useReveal()];
   const contactRef = useReveal();
 
   return (
@@ -274,7 +267,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-white">What We Offer</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-7">
+          <div className="grid md:grid-cols-2 max-w-4xl mx-auto gap-7">
             {OFFERS.map((o, i) => (
               <div key={o.title} ref={offerRefs[i]} className={`rv-scale d${i + 1}`}>
                 <Link href={o.href} className="block h-full">

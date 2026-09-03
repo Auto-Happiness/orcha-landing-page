@@ -1,63 +1,50 @@
 [
   {
-    "title": "Introduction",
-    "href": "/docs/intro"
+    "title": "Overview & Architecture",
+    "children": [
+      { "title": "Welcome to Agent OS", "href": "/docs/intro" },
+      { "title": "Architecture & Pipeline", "href": "/docs/architecture" }
+    ]
+  },
+  {
+    "title": "Getting Started & Deployment",
+    "children": [
+      { "title": "Quick Start (Self-Hosted)", "href": "/docs/getting-started/quickstart" },
+      { "title": "Database Setup & Dialects", "href": "/docs/getting-started/database-setup" },
+      { "title": "Visual Onboarding & Chat Guide", "href": "/docs/getting-started/onboarding-guide" },
+      { "title": "Rust WASM Compilation", "href": "/docs/getting-started/rust-wasm" },
+      { "title": "Local Embedding Transformer", "href": "/docs/getting-started/embeddings" }
+    ]
+  },
+  {
+    "title": "Core Concepts & Features",
+    "children": [
+      { "title": "Semantic Modeler & MDL", "href": "/docs/core-concepts/semantic-modeler" },
+      { "title": "Federated Multi-DB Queries", "href": "/docs/core-concepts/federated-queries" },
+      { "title": "Command Center & Dashboards", "href": "/docs/core-concepts/command-center" },
+      { "title": "Databook & Query Catalog", "href": "/docs/core-concepts/databook" },
+      { "title": "Model Context Protocol (MCP)", "href": "/docs/core-concepts/mcp" },
+      { "title": "Google Workspace & Integrations", "href": "/docs/core-concepts/integrations" },
+      { "title": "Observability & Grafana", "href": "/docs/core-concepts/monitoring" }
+    ]
+  },
+  {
+    "title": "SDKs & Client Libraries",
+    "children": [
+      { "title": "Go SDK", "href": "/docs/sdks/go" },
+      { "title": "Python SDK", "href": "/docs/sdks/python" }
+    ]
   },
   {
     "title": "API Reference",
     "href": "/docs/api-reference",
     "children": [
-      { "title": "Assistants", "href": "/docs/api-reference/assistants" },
-      { "title": "Attachments", "href": "/docs/api-reference/attachments" },
-      { "title": "Chat Message", "href": "/docs/api-reference/chat-message" },
-      { "title": "Chatflows", "href": "/docs/api-reference/chatflows" },
-      { "title": "Document Store", "href": "/docs/api-reference/document-store" },
-      { "title": "Feedback", "href": "/docs/api-reference/feedback" },
-      { "title": "Leads", "href": "/docs/api-reference/leads" },
-      { "title": "Ping", "href": "/docs/api-reference/ping" },
-      { "title": "Prediction", "href": "/docs/api-reference/prediction" },
-      { "title": "Tools", "href": "/docs/api-reference/tools" },
-      { "title": "Upsert History", "href": "/docs/api-reference/upsert-history" },
-      { "title": "Variables", "href": "/docs/api-reference/variables" },
-      { "title": "Vector Upsert", "href": "/docs/api-reference/vector-upsert" }
-    ]
-  },
-  {
-    "title": "Using Orcha",
-    "href": "/docs/using-orcha",
-    "children": [
-      {
-        "title": "Agent Orcha-strate",
-        "href": "/docs/using-orcha/agent-orcha-strate"
-      },
-      {
-        "title": "Prediction",
-        "href": "/docs/using-orcha/prediction"
-      },
-      {
-        "title": "Streaming",
-        "href": "/docs/using-orcha/streaming"
-      },
-      {
-        "title": "Document Store",
-        "href": "/docs/using-orcha/document-store"
-      },
-      {
-        "title": "Upsertion",
-        "href": "/docs/using-orcha/upsertion"
-      },
-      {
-        "title": "Monitoring",
-        "href": "/docs/using-orcha/monitoring"
-      },
-      {
-        "title": "Embed",
-        "href": "/docs/using-orcha/embed"
-      },
-      {
-        "title": "Uploads",
-        "href": "/docs/using-orcha/uploads"
-      }
+      { "title": "Overview & Authentication", "href": "/docs/api-reference" },
+      { "title": "Chat & Query API (/api/chat)", "href": "/docs/api-reference/chat" },
+      { "title": "MCP Protocol (/api/mcp)", "href": "/docs/api-reference/mcp" },
+      { "title": "Connection Tester (/api/test-connection)", "href": "/docs/api-reference/test-connection" },
+      { "title": "Export API (/api/export)", "href": "/docs/api-reference/export" },
+      { "title": "Prometheus Metrics (/api/metrics)", "href": "/docs/api-reference/metrics" }
     ]
   }
 ]

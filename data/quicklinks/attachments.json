@@ -1,5 +1,0 @@
-[
-  { "title": "Upload File", "href": "#upload" },
-  { "title": "Get File", "href": "#get" },
-  { "title": "Delete File", "href": "#delete" }
-]

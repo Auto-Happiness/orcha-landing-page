@@ -1,0 +1,7 @@
+[
+  { "title": "Endpoint Overview", "href": "#overview" },
+  { "title": "Request Schema", "href": "#request-schema" },
+  { "title": "Dialect Configurations", "href": "#dialects" },
+  { "title": "Port Mismatch Hints", "href": "#port-hints" },
+  { "title": "Response Formats", "href": "#response" }
+]

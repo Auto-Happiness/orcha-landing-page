@@ -1,0 +1,7 @@
+[
+  { "title": "OrchaFusion Engine", "href": "#orchafusion" },
+  { "title": "alias.table Syntax", "href": "#syntax" },
+  { "title": "Cross-DB Joins", "href": "#cross-db" },
+  { "title": "BFS Join Pathing", "href": "#bfs-pathing" },
+  { "title": "Performance & Pushdown", "href": "#pushdown" }
+]

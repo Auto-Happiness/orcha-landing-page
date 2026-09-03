@@ -1,0 +1,7 @@
+[
+  { "title": "Protocol Specification", "href": "#spec" },
+  { "title": "Authentication", "href": "#authentication" },
+  { "title": "listTools Method", "href": "#list-tools" },
+  { "title": "callTool Method", "href": "#call-tool" },
+  { "title": "JSON-RPC Error Codes", "href": "#error-codes" }
+]

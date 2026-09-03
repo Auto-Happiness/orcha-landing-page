@@ -1,0 +1,6 @@
+[
+  { "title": "Prometheus Scraping", "href": "#scraping" },
+  { "title": "Authentication & Token", "href": "#auth" },
+  { "title": "Exported Metric Catalog", "href": "#catalog" },
+  { "title": "PromQL Sample Queries", "href": "#promql" }
+]

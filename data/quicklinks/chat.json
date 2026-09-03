@@ -1,0 +1,9 @@
+[
+  { "title": "Endpoint Overview", "href": "#overview" },
+  { "title": "Headers & Auth", "href": "#headers" },
+  { "title": "Request Body", "href": "#request-body" },
+  { "title": "Synchronous Execution", "href": "#synchronous" },
+  { "title": "Streaming Response", "href": "#streaming" },
+  { "title": "Multi-DB Options", "href": "#multi-db" },
+  { "title": "Error Responses", "href": "#errors" }
+]

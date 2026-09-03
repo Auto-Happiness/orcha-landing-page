@@ -1,0 +1,10 @@
+[
+  { "title": "7-Stage Pipeline", "href": "#pipeline" },
+  { "title": "1. Intent Classifier", "href": "#intent" },
+  { "title": "2. Semantic Memory", "href": "#memory" },
+  { "title": "3. Column Pruner", "href": "#pruner" },
+  { "title": "4. Semantic SQL Gen", "href": "#sql-gen" },
+  { "title": "5. WASM Transpiler", "href": "#transpiler" },
+  { "title": "6. Dry-Plan Validator", "href": "#validator" },
+  { "title": "7. Native Execution", "href": "#execution" }
+]
