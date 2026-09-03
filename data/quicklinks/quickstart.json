@@ -1,0 +1,8 @@
+[
+  { "title": "Prerequisites", "href": "#prerequisites" },
+  { "title": "One-Command Setup", "href": "#one-command" },
+  { "title": "Manual Setup Steps", "href": "#manual-setup" },
+  { "title": "Docker Stack", "href": "#docker-stack" },
+  { "title": "Convex Backend", "href": "#convex-backend" },
+  { "title": "Troubleshooting", "href": "#troubleshooting" }
+]

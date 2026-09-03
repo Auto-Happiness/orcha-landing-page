@@ -1,0 +1,10 @@
+[
+  { "title": "Overview", "href": "#overview" },
+  { "title": "Installation", "href": "#installation" },
+  { "title": "Quick Start", "href": "#quickstart" },
+  { "title": "Synchronous Chat", "href": "#sync-chat" },
+  { "title": "Real-Time Streaming", "href": "#streaming" },
+  { "title": "Client Options", "href": "#client-options" },
+  { "title": "Error Handling", "href": "#error-handling" },
+  { "title": "GitHub Repository", "href": "#github" }
+]

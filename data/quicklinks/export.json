@@ -1,0 +1,7 @@
+[
+  { "title": "Endpoint Overview", "href": "#overview" },
+  { "title": "Supported Formats", "href": "#formats" },
+  { "title": "CSV Export", "href": "#csv" },
+  { "title": "Excel (XLSX) Export", "href": "#excel" },
+  { "title": "JSON Export", "href": "#json" }
+]

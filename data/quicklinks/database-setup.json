@@ -1,0 +1,8 @@
+[
+  { "title": "Supported Dialects", "href": "#supported-dialects" },
+  { "title": "PostgreSQL Setup", "href": "#postgresql" },
+  { "title": "MySQL & MariaDB", "href": "#mysql" },
+  { "title": "MSSQL & Oracle", "href": "#mssql-oracle" },
+  { "title": "SQLite Setup", "href": "#sqlite" },
+  { "title": "Credential Encryption", "href": "#encryption" }
+]

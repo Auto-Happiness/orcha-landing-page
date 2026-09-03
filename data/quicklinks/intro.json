@@ -1,14 +1,7 @@
 [
-  {
-    "title": "Introduction",
-    "href": "#getting-started"
-  },
-  {
-    "title": "Key Features",
-    "href": "#features"
-  },
-   {
-    "title": "Capabilities",
-    "href": "#capabilities"
-  }
+  { "title": "Overview", "href": "#overview" },
+  { "title": "Vision", "href": "#vision" },
+  { "title": "Key Features", "href": "#features" },
+  { "title": "Architecture Summary", "href": "#architecture-summary" },
+  { "title": "Next Steps", "href": "#next-steps" }
 ]

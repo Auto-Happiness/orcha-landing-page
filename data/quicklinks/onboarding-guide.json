@@ -1,0 +1,8 @@
+[
+  { "title": "Overview", "href": "#overview" },
+  { "title": "Step 1: Connectivity", "href": "#step-1-connectivity" },
+  { "title": "Step 2: Catalog Scan", "href": "#step-2-catalog" },
+  { "title": "Step 3: Semantic Bridge", "href": "#step-3-semantic-bridge" },
+  { "title": "Step 4: Deployment Profile", "href": "#step-4-profile" },
+  { "title": "Step 5: Database Chatting", "href": "#step-5-chatting" }
+]

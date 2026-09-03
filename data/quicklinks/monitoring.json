@@ -1,6 +1,7 @@
 [
-  { "title": "Quick Start", "href": "#dashboard" },
-  { "title": "Metrics", "href": "#metrics" },
-  { "title": "Alerts", "href": "#alerts" },
-  { "title": "Troubleshooting", "href": "#troubleshooting" }
+  { "title": "Overview", "href": "#overview" },
+  { "title": "Prometheus Metrics", "href": "#prometheus" },
+  { "title": "Grafana Dashboards", "href": "#grafana" },
+  { "title": "Key Telemetry Metrics", "href": "#metrics" },
+  { "title": "Alerting & Thresholds", "href": "#alerting" }
 ]

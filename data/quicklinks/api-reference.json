@@ -1,18 +1,8 @@
 [
-  {
-    "title": "Overview",
-    "href": "#"
-  },
-  {
-    "title": "Authentication",
-    "href": "#"
-  },
-  {
-    "title": "Rate Limits",
-    "href": "#"
-  },
-  {
-    "title": "SDKs",
-    "href": "#"
-  }
+  { "title": "Developer Portal", "href": "#developer-portal" },
+  { "title": "Authentication", "href": "#authentication" },
+  { "title": "Multi-DB Scoping", "href": "#scoping" },
+  { "title": "CORS Policy", "href": "#cors" },
+  { "title": "Rate Limiting", "href": "#rate-limiting" },
+  { "title": "API Endpoints Index", "href": "#endpoints" }
 ]

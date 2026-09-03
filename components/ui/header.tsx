@@ -18,12 +18,6 @@ import { useScroll, motion, useMotionValueEvent } from "framer-motion";
 
 const products = [
   {
-    title: "Orcha AI",
-    href: "/products/orcha-ai",
-    description: "No code editor to build your LLM applications",
-    icon: "", //Bot
-  },
-  {
     title: "Software Development",
     href: "/products/software-development",
     description:

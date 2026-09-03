@@ -10,8 +10,8 @@ import orchaicon from '@/assets/definitve-logo.png'
 const footerLinks = {
   products: [
     {
-      title: "Orcha AI",
-      href: "/products/orcha-ai",
+      title: "Orcha Agent OS",
+      href: "/products/orcha-agent-os",
     },
     // {
     //   title: "SAP Development",

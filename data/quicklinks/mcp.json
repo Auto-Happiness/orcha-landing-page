@@ -1,0 +1,7 @@
+[
+  { "title": "MCP Native Architecture", "href": "#architecture" },
+  { "title": "Claude Desktop Setup", "href": "#claude-desktop" },
+  { "title": "Cursor & Windsurf Setup", "href": "#cursor-windsurf" },
+  { "title": "Tool Dynamic Schemas", "href": "#schemas" },
+  { "title": "Security & Permissions", "href": "#security" }
+]

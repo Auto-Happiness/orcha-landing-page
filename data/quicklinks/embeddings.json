@@ -1,0 +1,7 @@
+[
+  { "title": "Overview", "href": "#overview" },
+  { "title": "Why Local Embeddings?", "href": "#why-local" },
+  { "title": "Docker Setup", "href": "#docker-setup" },
+  { "title": "API Specification", "href": "#api-spec" },
+  { "title": "Configuration", "href": "#configuration" }
+]

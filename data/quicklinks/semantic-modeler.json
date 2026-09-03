@@ -1,0 +1,7 @@
+[
+  { "title": "MDL Concept", "href": "#mdl" },
+  { "title": "Visual Schema Editor", "href": "#visual-editor" },
+  { "title": "Calculated Columns", "href": "#calculated-columns" },
+  { "title": "Relationships & Keys", "href": "#relationships" },
+  { "title": "dbt Manifest Import", "href": "#dbt-import" }
+]
